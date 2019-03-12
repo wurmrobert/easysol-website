@@ -25,29 +25,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
     Unsere: [
       {
         title: 'about_us.our_team.robert_wurm.skills1',
-        value: 90
+        value: 100
       },
       {
         title: 'about_us.our_team.robert_wurm.skills2',
-        value: 80
+        value: 100
       },
       {
         title: 'about_us.our_team.robert_wurm.skills3',
-        value: 80
+        value: 100
       },
       {
         title: 'about_us.our_team.robert_wurm.skills4',
-        value: 80
+        value: 100
       },
       {
         title: 'about_us.our_team.robert_wurm.skills5',
-        value: 90
+        value: 100
       }
     ],
     Mathias: [
       {
         title: 'about_us.our_team.mathias_aichinger.skills1',
-        value: 90
+        value: 100
       },
       {
         title: 'about_us.our_team.mathias_aichinger.skills2',
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       {
         title: 'about_us.our_team.mathias_aichinger.skills4',
-        value: 80
+        value: 90
       },
       {
         title: 'about_us.our_team.mathias_aichinger.skills5',
@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     Roberts: [
       {
         title: 'about_us.our_team.robert_wurm.skills1',
-        value: 60
+        value: 90
       },
       {
         title: 'about_us.our_team.robert_wurm.skills2',
@@ -85,7 +85,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       {
         title: 'about_us.our_team.robert_wurm.skills5',
-        value: 90
+        value: 100
       }
     ],
     Christians: [
@@ -95,11 +95,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       {
         title: 'about_us.our_team.christian_aichinger.skills2',
-        value: 90
+        value: 100
       },
       {
         title: 'about_us.our_team.christian_aichinger.skills3',
-        value: 20
+        value: 30
       },
       {
         title: 'about_us.our_team.christian_aichinger.skills4',
@@ -107,7 +107,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       {
         title: 'about_us.our_team.christian_aichinger.skills5',
-        value: 90
+        value: 100
       }
     ]
   }
@@ -117,6 +117,34 @@ export class HomeComponent implements OnInit, AfterViewInit {
     value: this.skills.Unsere,
     isPerson: false
   }
+
+  events = [
+    {
+      title: 'events.1.title',
+      subtitle: 'events.1.subtitle',
+      img: '/assets/events/cabletech.jpg',
+      link: 'https://www.cabletech.at'
+    },
+    {
+      title: 'events.2.title',
+      subtitle: 'events.2.subtitle',
+      img: '/assets/events/breko.png',
+      link: 'https://brekoverband.de/fiberdays19'
+    },
+    {
+      title: 'events.3.title',
+      subtitle: 'events.3.subtitle',
+      img: '/assets/events/anga.png',
+      link: 'http://www.angacom.de/'
+    },
+    {
+      title: 'events.4.title',
+      subtitle: 'events.4.subtitle',
+      img: '/assets/events/CableDays.jpg',
+      link: 'https://www.wko.at/site/cable-days/start.html'
+    },
+
+  ]
 
   displayType = DisplayType;
   homeImgLoaded = false;
@@ -171,6 +199,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   navigateTo(url: string) {
     this.router.navigateByUrl(url);
+  }
+
+  openInNewTab(url: string) {
+    const win = window.open(url, '_blank');
+    win.focus();
   }
 
   onLoadHomeStarted() {

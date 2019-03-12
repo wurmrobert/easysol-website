@@ -344,6 +344,36 @@
     }
 }
 
+#events {
+
+    .event-content {
+        padding-top: 40px;
+
+        .title {
+            text-align: left;
+            font-size: 24px;
+            padding-left: 25px;
+        }
+
+        .section-content {
+            padding-top: 0px;
+            margin-top: -20px;
+        }
+
+        img {
+            max-width: 280px;
+        }
+
+        .descr {
+            text-align: justify;
+        }
+
+        .more-content {
+            margin-top: 25px;
+        }
+    }
+    
+}
 
 #partner {
     padding-bottom: 80px;
@@ -360,9 +390,10 @@
         } 
 
         img {
-            padding-right: 40px;
+            padding-right: 60px;
             position: absolute;
             margin: auto;
+            cursor: pointer;
             
             // -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
             // filter: grayscale(100%);
