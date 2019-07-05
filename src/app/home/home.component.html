@@ -154,7 +154,14 @@
     [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" allow="autoplay"
     uk-video="automute: true"></iframe>
 
+    <div class="more-content">
+      <button type="button" class="round-btn orange" (click)="navigateTo('services/isp-services')">
+        {{'_general.more' | translate}}
+      </button>
+    </div>
+
 </div>
+
 
 
 
@@ -165,6 +172,8 @@
 
     <p class="title bold">{{'about_us.title' | translate}}</p>
     <hr>
+
+    
 
 
     <div class="section-content uk-child-width-expand@s" uk-grid>
@@ -183,6 +192,12 @@
           {{ 'about_us.company_descr_1' | translate }}
           {{ 'about_us.company_descr_2' | translate }}
         </p>
+
+        <div class="more-content" style="display: flex">
+          <button type="button" class="round-btn orange pulsing" (click)="navigateTo('unternehmen/jobs')">
+            {{'jobs.open' | translate}}
+          </button>
+        </div>
       </div>
 
 

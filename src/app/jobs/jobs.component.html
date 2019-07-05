@@ -59,6 +59,22 @@
           </button>
         </div>
 
+
+        <!-- geringfügig -->
+        <h6 class="job-list-title" *ngIf="gering && gering.length > 0" >Geringfügig</h6>
+        <div *ngFor="let job of gering" class="job-entry" [class.long]="job.title.length > 20" (click)="navigateToJob(job)">
+
+          <div class="job-entry-title-content" >
+            <p class="job-entry-title gering" >{{job.title}}</p> <p class="job-entry-title-sex">(m/w)</p>
+          </div>
+          <p class="job-entry-sub-title" >{{job.subtitle}}</p>
+
+          <button type="button" class="job-nav-btn pull-right mat-icon-btn" (click)="navigateToJob(job)">
+              <!-- <mat-icon>keyboard_arrow_right</mat-icon> -->
+              <img src="assets/icons/keyboard_arrow_right.svg" alt="">
+          </button>
+        </div>
+
       </div>
 
       <div class="detail-container" [@visibilityChanged]="detailViewVisibility">

@@ -26,11 +26,17 @@ export class JobsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   jobsFullTime = [
     { title: 'Frontend Entwickler' , subtitle: 'Angular | TypeScript | HTML', route: 'frontend' },
-    { title: 'Backend Entwickler' , subtitle: 'Ruby | Docker | SQL | REST', route: 'backend' }
+    { title: 'Backend Entwickler' , subtitle: 'Ruby | Docker | SQL | REST', route: 'backend' },
+    { title: 'Netzwerktechniker' , subtitle: 'IP | Routing | Security | Linux', route: 'netzwerktechniker' }
   ];
 
   internships = [
-    { title: 'Softwareentwicklung / Netzwerktechnik' , subtitle: 'Angular | TypeScript | HTML | Ruby | Docker | SQL', route: 'internship' }
+  ];
+  // { title: 'Softwareentwicklung / Netzwerktechnik' , subtitle: 'Angular | TypeScript | HTML | Ruby | Docker | SQL', route: 'internship' }
+
+
+  gering = [
+    { title: 'Sekretärin für Administration' , subtitle: '8h Woche', route: 'sekretärin' }
   ];
 
   private routerSubscription: Subscription;

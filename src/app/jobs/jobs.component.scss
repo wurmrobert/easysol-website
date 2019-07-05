@@ -57,6 +57,11 @@ a {
                 transform: scaleX(1.08511);
                 margin-left: 25px;
                 margin-top: 5px;
+
+                &.gering {
+                    margin-left: 28px !important;
+                    margin-top: 7px !important;
+                }
             }
 
             .job-entry-title-sex {

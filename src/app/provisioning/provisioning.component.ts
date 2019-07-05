@@ -41,7 +41,14 @@ export class ProvisioningComponent implements OnInit, AfterViewInit {
   ];
 
   images_monitoring = [
-    { src: 'assets/provisioning/screenshots/Monitoring.png', caption: 'Monitoring' }
+    { src: 'assets/provisioning/screenshots/Monitoring2.png', caption: 'Downstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring3.png', caption: 'Downstream Monitoring' },
+
+    { src: 'assets/provisioning/screenshots/Monitoring1.png', caption: 'Upstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring5.png', caption: 'Error Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring6.png', caption: 'Upstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring7.png', caption: 'Status Monitoring' }
+
   ];
 
   showProvisioningVideoTabs = false;
