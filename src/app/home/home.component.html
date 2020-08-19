@@ -2,7 +2,7 @@
 
 
 
-  <div class="home-img-content">
+  <!-- <div class="home-img-content">
     <div class="home-img-wrapper">
       <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
     </div>
@@ -12,7 +12,47 @@
     <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText"
       class="monserat-extra-bold">{{headerTexts[currentHeaderIndex]
       | translate}}</p>
+  </div> -->
+
+  <div class="uk-container">
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+      <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+
+        <p class="descr">
+          Provider Management Software
+        </p>
+
+        <h1><strong>{{'The platform for a connected world.' | translate}}</strong></h1>
+
+        <span class="divider"></span>
+
+        <div class="demo-request-content">
+          <button type="button" class="round-btn" (click)="onRequestDemoClicked()">
+            {{'Request a demo' | translate}}
+          </button>
+        </div>
+
+        <div class="sub-descr-content">
+          <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="sub-descr">{{headerTexts[currentHeaderIndex]
+      | translate}}</p>
+
+        </div>
+
+      </div>
+
+      <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="cloud-img-wrapper">
+          <img *ngIf src="assets/home/v3/dashboard-overview.png" (load)="onLoadHomeEnded()"
+            [class.loaded]="homeImgLoaded">
+        </ngui-in-view>
+      </div>
+    </div>
+
+
   </div>
+
+
 
 </div>
 
@@ -154,11 +194,11 @@
     [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" allow="autoplay"
     uk-video="automute: true"></iframe>
 
-    <div class="more-content">
-      <button type="button" class="round-btn orange" (click)="navigateTo('services/isp-services')">
-        {{'_general.more' | translate}}
-      </button>
-    </div>
+  <div class="more-content">
+    <button type="button" class="round-btn orange" (click)="navigateTo('services/isp-services')">
+      {{'_general.more' | translate}}
+    </button>
+  </div>
 
 </div>
 
@@ -173,7 +213,7 @@
     <p class="title bold">{{'about_us.title' | translate}}</p>
     <hr>
 
-    
+
 
 
     <div class="section-content uk-child-width-expand@s" uk-grid>
@@ -418,12 +458,12 @@
               <div class="uk-position-center uk-panel"></div>
             </li> -->
 
-            
-            
+
+
 
             <li>
               <ngui-in-view>
-                <img *ngIf src="assets/partners/netcon_logo.svg" (click)="openInNewTab('http://www.netcon.at')" >
+                <img *ngIf src="assets/partners/netcon_logo.svg" (click)="openInNewTab('http://www.netcon.at')">
               </ngui-in-view>
               <div class="uk-position-center uk-panel"></div>
             </li>
@@ -436,7 +476,8 @@
 
             <li>
               <ngui-in-view>
-                <img *ngIf src="assets/partners/uni_software_plus.png" (click)="openInNewTab('https://www.unisoftwareplus.com')">
+                <img *ngIf src="assets/partners/uni_software_plus.png"
+                  (click)="openInNewTab('https://www.unisoftwareplus.com')">
               </ngui-in-view>
 
               <div class="uk-position-center uk-panel"></div>
@@ -451,7 +492,7 @@
               <div class="uk-position-center uk-panel"></div>
             </li>
 
-            
+
 
 
             <li>
@@ -471,7 +512,7 @@
               <div class="uk-position-center uk-panel"></div>
             </li>
 
-            
+
             <li>
               <ngui-in-view>
                 <img *ngIf src="assets/partners/3starsnet.png" (click)="openInNewTab('https://www.3starsnet.com/')">

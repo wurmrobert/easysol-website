@@ -12,13 +12,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   showHeaderText = true;
   currentHeaderIndex = 0;
-  headlineTypeSpeed = 0;
+  headlineTypeSpeed = 65; // 0;
 
+  // headerTexts = [
+  //   'home.headline1',
+  //   'home.headline2',
+  //   'home.headline4',
+  //   'home.headline3'
+  // ];
   headerTexts = [
-    'home.headline1',
-    'home.headline2',
-    'home.headline4',
-    'home.headline3'
+    'ACS - TR069 - SNMP - USP - TFTP',
+    'FTTX - DOCSIS - GPON',
+    'DHCP - RADIUS - IP',
+    'PROVISIONING - MONITORING'
   ];
 
   skills = {
@@ -177,6 +183,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     }, 300);
 
+  
     setTimeout(() => {
       this.headlineTypeSpeed = 65;
     }, 1000);
@@ -200,6 +207,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if ((e.srcElement as any).tagName !== 'IMG') {
       this.showSkillsFor('Unsere');
     }
+  }
+
+
+  onRequestDemoClicked() {
+    const mailText = 'mailto:office@easysol.com?subject=EasyProvisioning Demo&body='; // add the links to body
+    window.location.href = mailText;
   }
 
   navigateTo(url: string) {

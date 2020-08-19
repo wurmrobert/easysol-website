@@ -2,7 +2,50 @@
 @import 'src/style/mobile';
 
 .home-content {
-    background-color: #ffffff;
+    margin-top: 65px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    // background-color: $gray-lighter;
+    background-color: $orange;
+    color: white;
+
+    h1 {
+        color: white;
+        margin-top: 0px;
+    }
+
+    strong {
+        color: white;
+    }
+
+
+    
+
+    .demo-request-content {
+        button {
+            text-transform: uppercase;
+            background-color: $gray-lighter;
+            color: white;
+            border-radius: 2px;
+
+            font-size: 18px;
+            padding-top: 10px;
+            padding-bottom: 6px;
+        }
+    }
+
+    .sub-descr-content {
+        min-height: 25px;
+        margin-top: 25px;
+
+        .sub-descr {
+            font-size: 12px;
+        }
+    }
+
+
 }
 
 .home-img-content {
@@ -41,6 +84,7 @@
         margin-left: calc(50vw - 26px);
     }
 }
+
 
 
 
