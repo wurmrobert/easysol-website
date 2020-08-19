@@ -1,5 +1,4 @@
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { trigger, state, transition, animate, style } from '@angular/animations';
 declare var UIkit: any;
 

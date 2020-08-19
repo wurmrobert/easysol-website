@@ -1,10 +1,9 @@
 import { DisplayDetector, DisplayType } from './../display-detector.service';
 import { TranslateService } from '@ngx-translate/core';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { NavbarService } from './navbar.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
-import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
 
 declare var UIkit: any;
 
@@ -136,7 +135,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onNavigationItemClicked(event: MouseEvent, tab) {
     this.mobileMenuOpen = false;
     let animation = false;
-    if (!tab.sub || event.srcElement.className === 'tab-icon' || event.srcElement.className === 'tab-a') {
+    if (!tab.sub || (event.srcElement as any).className === 'tab-icon' || (event.srcElement as any).className === 'tab-a') {
       animation = this.router.url.split('/').length <= 2;
       if (this.displayDetector.getDeviceType() === DisplayType.Phone && tab.id === 'services') {
         this.router.navigate(['services/isp-services']); // on mobile always to provisioning page

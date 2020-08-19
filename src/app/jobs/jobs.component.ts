@@ -1,8 +1,7 @@
 import { Router, NavigationEnd } from '@angular/router';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { Subscription } from 'rxjs/Subscription';
-import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+import { Subscription } from 'rxjs';
 import { NavbarService } from './../navbar/navbar.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
@@ -24,11 +23,17 @@ export class JobsComponent implements OnInit, AfterViewInit, OnDestroy {
   jobListVisibility = 'shown';
   detailViewVisibility = 'hidden';
 
+  // jobsFullTime = [
+  //   { title: 'Junior Frontend Entwickler' , subtitle: 'Angular | TypeScript | HTML', route: 'frontend' },
+  //   { title: 'Junior Backend Entwickler' , subtitle: 'Ruby | Docker | SQL | REST', route: 'backend' },
+  //   { title: 'Netzwerktechniker' , subtitle: 'IP | Routing | Security | Linux', route: 'netzwerktechniker' }
+  // ];
+
   jobsFullTime = [
-    { title: 'Frontend Entwickler' , subtitle: 'Angular | TypeScript | HTML', route: 'frontend' },
-    { title: 'Backend Entwickler' , subtitle: 'Ruby | Docker | SQL | REST', route: 'backend' },
-    { title: 'Netzwerktechniker' , subtitle: 'IP | Routing | Security | Linux', route: 'netzwerktechniker' }
+    { title: 'Full Stack Developer', subtitle: 'Angular | TypeScript | Ruby | Docker | SQL | REST', route: 'fullstack' },
+    { title: 'Systems Engineer Network', subtitle: 'Netzwerktechnik | Routing | Security | Linux | Docker', route: 'network-engineer' }
   ];
+
 
   internships = [
   ];
@@ -36,7 +41,7 @@ export class JobsComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   gering = [
-    { title: 'Sekretärin für Administration' , subtitle: '8h Woche', route: 'sekretärin' }
+    { title: 'Sekretärin für Administration', subtitle: '8h Woche', route: 'sekretärin' }
   ];
 
   private routerSubscription: Subscription;
@@ -57,7 +62,7 @@ export class JobsComponent implements OnInit, AfterViewInit, OnDestroy {
     })
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 
   ngAfterViewInit(): void {

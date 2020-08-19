@@ -143,7 +143,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       img: '/assets/events/CableDays.jpg',
       link: 'https://www.wko.at/site/cable-days/start.html'
     },
-
+    {
+      title: 'events.5.title',
+      subtitle: 'events.5.subtitle',
+      img: '/assets/events/SuisseDigital.png',
+      link: 'https://www.suissedigital.ch'
+    }
   ]
 
   displayType = DisplayType;
@@ -192,7 +197,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   onTeamSectionClicked(e: MouseEvent) {
-    if (e.srcElement.tagName !== 'IMG') {
+    if ((e.srcElement as any).tagName !== 'IMG') {
       this.showSkillsFor('Unsere');
     }
   }
