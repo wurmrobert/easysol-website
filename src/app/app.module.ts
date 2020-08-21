@@ -1,3 +1,4 @@
+import { MacSlideshowComponent } from './provisioning/mac-slideshow/mac-slideshow.component';
 import { EasyLoadingSpinnerModule } from './loading-spinner/easy-loading-spinner.module';
 import { DisplayDetector } from './display-detector.service';
 import { NguiInViewModule } from './ngui-in-view/ngui-in-view.module';
@@ -43,7 +44,8 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     NavbarComponent,
     CompanyLocationMapComponent,
-    NavSectionDirective
+    NavSectionDirective,
+    MacSlideshowComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

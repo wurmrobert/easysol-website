@@ -13,8 +13,7 @@ import { EasyLoadingSpinnerModule } from '../loading-spinner/easy-loading-spinne
     NguiInViewModule, EasyLoadingSpinnerModule
   ],
   declarations: [
-    ProvisioningComponent,
-    MacSlideshowComponent
+    ProvisioningComponent
   ]
 })
 export class ProvisioningModule { }
