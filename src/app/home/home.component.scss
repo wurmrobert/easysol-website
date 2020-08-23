@@ -542,6 +542,99 @@ section {
     }
 }
 
+
+#news {
+    padding-top: 45px;
+    padding-bottom: 85px;
+
+    .uk-container-expand {
+        max-width: 1920px;
+    }
+    
+    .title {
+        // margin-top: 45px;
+    }
+
+    .news-slider {
+        margin-top: 40px;
+
+        .uk-slider-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .post-panel {
+            // background-color: white;
+            // margin: 15px;
+            // padding: 15px;
+
+
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+
+            .uk-card-body {
+                padding: 15px;
+            }
+
+
+            .bottom-container {
+                font-size: 13px;
+                line-height: 20px;
+
+                height: 20px;
+                margin-bottom: -5px;
+                display: inherit;
+
+                .date {
+                    float: left;
+                }
+
+                .fb {
+                    float: right;
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    a {
+                        color: #666;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+
+    .image-dots {
+        display: -webkit-inline-box;
+        margin-top: 10px;
+        margin-left: 0px;
+        cursor: pointer;
+    
+        float: right;
+    
+        .img-dot {
+            width: 10px;
+            height: 10px;
+            background-color: $gray-dark;
+            opacity: 0.2;
+            border-radius: 10px;
+            margin-right: 10px;
+    
+            &.active {
+                opacity: 1.0;
+                background-color: $gray-dark;
+            }
+        }
+    }
+}
+
 #events {
 
     .event-content {

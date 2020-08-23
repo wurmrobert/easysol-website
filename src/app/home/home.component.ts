@@ -2,6 +2,7 @@ import { DisplayDetector, DisplayType } from './../display-detector.service';
 import { NavbarService } from './../navbar/navbar.service';
 import { Router } from '@angular/router';
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { News } from '../news/News';
 
 @Component({
   selector: 'app-home',
@@ -165,7 +166,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   images_provisioning = [
     // { src: 'assets/provisioning/screenshots/Dashboard.png', caption: 'Dashboard' },
     { src: 'assets/home/v3/dashboard-overview-browser.png', caption: 'Dashboard' },
-    
+
     { src: 'assets/provisioning/screenshots/Provisioning.png', caption: 'Services' },
     { src: 'assets/provisioning/screenshots/Provisioning2.png', caption: 'Services' },
     { src: 'assets/provisioning/screenshots/ACS-Tasks2.png', caption: 'ACS-Tasks' },
@@ -204,6 +205,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ];
 
+  news_posts = News.getNews();
+
+  onNewsDotClicked(post) {
+    if (post.imgIndex >= post.imgs.length - 1) {
+      post.imgIndex = 0;
+    } else {
+      post.imgIndex++;
+    }
+  }
 
   displayType = DisplayType;
   homeImgLoaded = false;
@@ -212,10 +222,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   showProvisioningVideoTabs = false;
   showManagementVideoTabs = false;
 
-  @ViewChild('provVideoContent', {static: false})
+  @ViewChild('provVideoContent', { static: false })
   provVideoContent: ElementRef;
 
-  @ViewChild('managVideoContent', {static: false})
+  @ViewChild('managVideoContent', { static: false })
   managVideoContent: ElementRef;
 
   constructor(
@@ -227,20 +237,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    
+
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       if (window.location.hash) {
         const hash = window.location.hash.split('#');
-        if (hash.length > 1)  {
+        if (hash.length > 1) {
           this.navbarService.scrollToHash(hash[1], true);
         }
       }
     }, 300);
 
-  
+
     setTimeout(() => {
       this.headlineTypeSpeed = 65;
     }, 1000);
@@ -298,14 +308,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   showProvVideoTab() {
     this.showProvisioningVideoTabs = true;
     setTimeout(() => {
-        this.provVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      this.provVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 300);
   }
 
   showManagementVideoTab() {
     this.showManagementVideoTabs = true;
     setTimeout(() => {
-        this.managVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      this.managVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 300);
   }
 
@@ -317,7 +327,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (this.currentHeaderIndex >= this.headerTexts.length - 1) {
         this.currentHeaderIndex = 0;
       } else {
-        this.currentHeaderIndex ++;
+        this.currentHeaderIndex++;
       }
       setTimeout(() => {
         this.showHeaderText = true;

@@ -661,6 +661,81 @@
 </section> -->
 
 
+<section appNavSection id="news" class="gray">
+  <div [class.uk-container]="!mobileMode" [class.uk-container-expand]="!mobileMode">
+
+    <div>
+
+    
+    <p class="title bold">{{'News' | translate}}</p>
+    <hr>
+
+
+    <div uk-slider="finite: false" class="news-slider">
+
+      <div class="uk-position-relative">
+
+        <div class="uk-slider-container">
+          <ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-grid">
+
+            <li *ngFor="let post of news_posts" class="post-panel">
+
+              <div class="uk-card uk-card-default uk-card-body">
+
+
+                <ngui-in-view>
+
+                  <img *ngIf [src]="post.imgs[post.imgIndex]">
+
+                </ngui-in-view>
+
+
+                <div class="image-dots" *ngIf="post.imgs.length > 1">
+                  <div *ngFor="let p of post.imgs; let i = index;" class="img-dot" (click)="onNewsDotClicked(post)" [class.active]="i === post.imgIndex"></div>
+                </div>
+
+                <p>{{ post.text }}</p>
+
+                <div class="bottom-container">
+
+                  <div class="date">
+                    <p>{{ post.date | date: 'mediumDate'}}</p>
+                  </div>
+
+                  <div class="fb" *ngIf="post.facebook">
+                    <p class="small"><i class="fa fa-facebook-official"></i> <a [href]="post.facebook">Auf Facebook
+                        ansehen</a></p>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+      </div>
+
+      <!-- <ul class="uk-slider-nav uk-dotnav"></ul> -->
+
+
+
+    </div>
+
+  </div>
+
+  </div>
+</section>
+
+
+
 <section appNavSection id="events">
   <div [class.uk-container]="!mobileMode">
 

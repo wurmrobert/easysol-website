@@ -47,15 +47,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
       ]
     },
     {
-      title: 'events.title',
-      id: 'events',
-      active: ['events'],
+      title: 'news.title',
+      id: 'news',
+      active: ['news'],
       icon: 'assets/icons/events.svg',
       icon_active: 'assets/icons/events_active.svg',
       url: ''
     },
     {
-      title: '_general.partners',
+      title: '_general.references',
       id: 'partner',
       active: ['partner'],
       icon: 'assets/icons/partners.svg',
