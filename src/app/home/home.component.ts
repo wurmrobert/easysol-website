@@ -129,25 +129,29 @@ export class HomeComponent implements OnInit, AfterViewInit {
       title: 'events.1.title',
       subtitle: 'events.1.subtitle',
       img: '/assets/events/cabletech.jpg',
-      link: 'https://www.cabletech.at'
+      link: 'https://www.cabletech.at',
+      canceled: true
     },
     {
       title: 'events.2.title',
       subtitle: 'events.2.subtitle',
       img: '/assets/events/breko.png',
-      link: 'https://brekoverband.de/fiberdays19'
+      link: 'https://brekoverband.de/fiberdays19',
+      canceled: true
     },
     {
       title: 'events.3.title',
       subtitle: 'events.3.subtitle',
       img: '/assets/events/anga.png',
-      link: 'http://www.angacom.de/'
+      link: 'http://www.angacom.de/',
+      canceled: true
     },
     {
       title: 'events.4.title',
       subtitle: 'events.4.subtitle',
       img: '/assets/events/CableDays.jpg',
-      link: 'https://www.wko.at/site/cable-days/start.html'
+      link: 'https://www.wko.at/site/cable-days/start.html',
+      canceled: true
     },
     {
       title: 'events.5.title',

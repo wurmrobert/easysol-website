@@ -675,7 +675,10 @@
         <div *ngFor="let event of events" class="event-content">
 
           <p class="title extra-bold">{{ event.title  | translate}}</p>
-          <div class="section-content  uk-child-width-expand@s" uk-grid>
+          <div class="beta-tab" *ngIf="event.canceled">{{'canceled' | translate}}</div>
+
+
+          <div class="section-content  uk-child-width-expand@s" uk-grid [class.canceled]="event.canceled">
 
 
             <div class="col uk-padding">
@@ -803,100 +806,96 @@
       uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
       <div class="col uk-padding">
-        <img src="assets/partners/hall.jpg" alt="easy provisioning"
-        (click)="openInNewTab('http://www.citynet.at')">
+        <img src="assets/partners/hall.jpg" alt="easy provisioning" (click)="openInNewTab('http://www.citynet.at')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/kufnet.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.kufnet.at')">
+        <img src="assets/partners/kufnet.png" alt="easy provisioning" style="height: 35px; margin-top: 8px;"
+          (click)="openInNewTab('https://www.kufnet.at')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/cosys.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.cosys.cc')">
+        <img src="assets/partners/cosys.png" alt="easy provisioning" style="height: 40px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.cosys.cc')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/3starsnet.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.3starsnet.com')">
+        <img src="assets/partners/3starsnet.png" alt="easy provisioning" style="height: 40px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.3starsnet.com')">
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/partners/EWG.jpg" alt="easy provisioning" style="height: 55px;"
-        (click)="openInNewTab('https://www.ew-goldbach-hoesbach.de')">
+          (click)="openInNewTab('https://www.ew-goldbach-hoesbach.de')">
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/partners/experts.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.kremstalnet.at')">
+          (click)="openInNewTab('https://www.kremstalnet.at')">
       </div>
 
       <div class="col uk-padding">
         <img src="assets/partners/webspeed.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.webspeed.at')">
+          (click)="openInNewTab('https://www.webspeed.at')">
       </div>
 
       <div class="col uk-padding">
         <img src="assets/partners/gibsolutions.svg" alt="easy provisioning"
-        (click)="openInNewTab('https://www.gib-solutions.ch')">
+          (click)="openInNewTab('https://www.gib-solutions.ch')">
       </div>
 
       <div class="col uk-padding">
         <img src="assets/partners/iwb.svg" alt="easy provisioning" style="height: 35px"
-        (click)="openInNewTab('https://www.iwb.ch')">
+          (click)="openInNewTab('https://www.iwb.ch')">
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/partners/gerlos.png" alt="easy provisioning" style="height: 50px;"
-        (click)="openInNewTab('http://www.gerlos.tirol.gv.at/Kabel-TV_Gerlos')">
+          (click)="openInNewTab('http://www.gerlos.tirol.gv.at/Kabel-TV_Gerlos')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/infotech.png" alt="easy provisioning"
-        (click)="openInNewTab('https://inext.at/')">
+        <img src="assets/partners/infotech.png" alt="easy provisioning" (click)="openInNewTab('https://inext.at/')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/penet.png" alt="easy provisioning"
-        (click)="openInNewTab('https://penet.at/')">
+        <img src="assets/partners/penet.png" alt="easy provisioning" (click)="openInNewTab('https://penet.at/')">
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/partners/hoi.png" alt="easy provisioning" style="height: 40px;"
-        (click)="openInNewTab('https://hoi.li/')">
+          (click)="openInNewTab('https://hoi.li/')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/bkdat.png" alt="easy provisioning"
-        (click)="openInNewTab('http://www.bkdat.net/')">
+        <img src="assets/partners/bkdat.png" alt="easy provisioning" (click)="openInNewTab('http://www.bkdat.net/')">
       </div>
 
       <div class="col uk-padding">
         <img src="assets/partners/stw-kapfenberg.jpg" alt="easy provisioning"
-        (click)="openInNewTab('https://www.stadtwerke-kapfenberg.at/')">
+          (click)="openInNewTab('https://www.stadtwerke-kapfenberg.at/')">
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/partners/netopsie.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.netopsie.de/')">
+          (click)="openInNewTab('https://www.netopsie.de/')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/etech.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.etech.at/')">
+        <img src="assets/partners/etech.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.etech.at/')">
       </div>
 
       <!-- <div class="col uk-padding">
@@ -905,37 +904,41 @@
       </div> -->
 
       <div class="col uk-padding">
-        <img src="assets/partners/kabelplus.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.kabelplus.at/')">
+        <img src="assets/partners/kabelplus.png" alt="easy provisioning" style="height: 35px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.kabelplus.at/')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/stw-baden.jpg" alt="easy provisioning"
-        (click)="openInNewTab('https://www.stadtwerke-baden-baden.de/')">
+        <img src="assets/partners/stw-baden.jpg" alt="easy provisioning" style="height: 47px;"
+          (click)="openInNewTab('https://www.stadtwerke-baden-baden.de/')">
       </div>
 
       <div class="col uk-padding">
-        <img src="assets/partners/matrix.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.matrix.nl/')">
-      </div>
-
-
-      <div class="col uk-padding">
-        <img src="assets/partners/asak.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.asak.at/')">
+        <img src="assets/partners/matrix.png" alt="easy provisioning" style="height: 32px; margin-top: 6px;"
+          (click)="openInNewTab('https://www.matrix.nl/')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/antec.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.antec-servicepool.de/')">
+        <img src="assets/partners/asak.png" alt="easy provisioning" style="margin-top: -28px; height: 100px;"
+          (click)="openInNewTab('https://www.asak.at/')">
       </div>
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/cable4.png" alt="easy provisioning"
-        (click)="openInNewTab('https://www.cable4.de')">
+        <img src="assets/partners/antec.png" alt="easy provisioning" style="height: 120px; margin-top: -39px;"
+          (click)="openInNewTab('https://www.antec-servicepool.de/')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/cable4.png" alt="easy provisioning" (click)="openInNewTab('https://www.cable4.de')">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/teletronic.png" alt="easy provisioning" style="margin-top: -9px;"
+          (click)="openInNewTab('https://teletronic.at')">
       </div>
 
 

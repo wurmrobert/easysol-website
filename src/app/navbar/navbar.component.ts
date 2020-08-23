@@ -30,21 +30,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       active: ['services', 'provisioning'],
       icon: 'assets/icons/services.svg',
       icon_active: 'assets/icons/services_active.svg',
-      url: '',
-      sub: [
-        {
-          title: 'services.isp.title',
-          url: 'services/isp-services'
-        },
-        {
-          title: 'services.dev.title',
-          url: 'services/software-entwicklung'
-        },
-        {
-          title: 'services.consulting.title',
-          url: 'services/consulting'
-        }
-      ]
+      url: ''
     },
     {
       title: 'about_us.title',
