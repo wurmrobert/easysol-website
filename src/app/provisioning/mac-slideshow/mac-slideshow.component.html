@@ -11,9 +11,9 @@
           <div *ngFor="let p of images; let i = index;" class="img-dot" (click)="onDotClicked(i)" [class.active]="i === images_i"></div>
         </div>
 
-        <a data-caption="Services" (click)="openLightbox()" [href]="images[images_i].src" class="fullscreen-href">
+        <!-- <a data-caption="Services" (click)="openLightbox()" [href]="images[images_i].src" class="fullscreen-href">
           <img class="fullscreen-btn" src="assets/icons/fullscreen.svg">
-        </a>
+        </a> -->
 
       </ng-container>
 

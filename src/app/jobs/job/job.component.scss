@@ -9,7 +9,8 @@
 .back-btn {
     margin-top: 10px;
     margin-left: 155px;
-    position: absolute;   
+    position: absolute;
+    z-index: 100; 
 }
 
 .spinner-content {

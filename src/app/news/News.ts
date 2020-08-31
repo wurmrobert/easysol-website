@@ -26,30 +26,9 @@ export class News {
                 Natürlich wünschen wir allen viel Gesundheit und alles Gute in dieser schwierigen Zeit.`
             },
             {
-                title: 'Good Year 2019',
-                facebook: 'https://www.facebook.com/easysolutionsgmbh/posts/454851051862795',
-                date: Date.parse('December 31 2019'),
-                imgs: [
-                    'assets/news/3/82093644_454849151862985_3771161433996263424_o.jpg'
-                ],
-                imgIndex: 0,
-                text: `Wir möchten uns bei allen Beteiligten, insbesondere bei unseren Kunden und Geschäftspartnern, für das erfolgreiche Jahr 2019 bedanken. Wir freuen uns auf die nächsten spannenden Projekte und wünschen euch einen guten Rutsch ins nächste Jahrzehnt. 🥂🍾🎇`
-            },
-            {
-                title: 'Spenden 2019',
-                facebook: 'https://www.facebook.com/easysolutionsgmbh/posts/447568115924422',
-                date: Date.parse('December 21 2019'),
-                imgs: [
-                    'assets/news/4/80470638_447567252591175_9096558884012687360_o.jpg'
-                ],
-                imgIndex: 0,
-                text: `Spenden statt verschwenden 🎗 
-                Ganz nach diesem Motto entschieden wir uns heuer das Budget für Weihnachtsgeschenke besser zu nutzen und die Österreichische Krebshilfe Oberösterreich zu unterstützen.`
-            },
-            {
                 title: 'SuisseDigital Day 2019',
                 facebook: 'https://www.facebook.com/easysolutionsgmbh/posts/447568115924422',
-                date: Date.parse('December 21 2019'),
+                date: Date.parse('December 5 2019'),
                 imgs: [
                     'assets/news/5/78993030_436036280410939_6213129789524410368_o.jpg',
                     'assets/news/5/78370474_436035393744361_1688899759193980928_o.jpg',
@@ -80,6 +59,27 @@ export class News {
                 imgIndex: 0,
                 text: `Das waren die Cable Days 2019 in Salzburg -  eine Veranstaltung für Kabelnetzbetreiber und Dienstleister rund um Telekommunikation der WKO.
                 Auch heuer waren wir erneut Aussteller und Sponsor der Veranstaltung. Unterstrichen mit dem Abendprogramm im Red bull Hangar 7 war die Veranstaltung abermals ein voller Erfolg.`
+            },
+            {
+                title: 'Good Year 2019',
+                facebook: 'https://www.facebook.com/easysolutionsgmbh/posts/454851051862795',
+                date: Date.parse('December 31 2019'),
+                imgs: [
+                    'assets/news/3/82093644_454849151862985_3771161433996263424_o.jpg'
+                ],
+                imgIndex: 0,
+                text: `Wir möchten uns bei allen Beteiligten, insbesondere bei unseren Kunden und Geschäftspartnern, für das erfolgreiche Jahr 2019 bedanken. Wir freuen uns auf die nächsten spannenden Projekte und wünschen euch einen guten Rutsch ins nächste Jahrzehnt. 🥂🍾🎇`
+            },
+            {
+                title: 'Spenden 2019',
+                facebook: 'https://www.facebook.com/easysolutionsgmbh/posts/447568115924422',
+                date: Date.parse('December 21 2019'),
+                imgs: [
+                    'assets/news/4/80470638_447567252591175_9096558884012687360_o.jpg'
+                ],
+                imgIndex: 0,
+                text: `Spenden statt verschwenden 🎗 
+                Ganz nach diesem Motto entschieden wir uns heuer das Budget für Weihnachtsgeschenke besser zu nutzen und die Österreichische Krebshilfe Oberösterreich zu unterstützen.`
             },
             {
                 title: 'Beer and Code 2019',

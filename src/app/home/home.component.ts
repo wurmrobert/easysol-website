@@ -148,6 +148,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       canceled: true
     },
     {
+      title: 'events.5.title',
+      subtitle: 'events.5.subtitle',
+      img: '/assets/events/frk.png',
+      link: 'https://www.breitbandkongress-frk.de/'
+    },
+    {
       title: 'events.4.title',
       subtitle: 'events.4.subtitle',
       img: '/assets/events/CableDays.jpg',
@@ -155,8 +161,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       canceled: true
     },
     {
-      title: 'events.5.title',
-      subtitle: 'events.5.subtitle',
+      title: 'events.6.title',
+      subtitle: 'events.6.subtitle',
       img: '/assets/events/SuisseDigital.png',
       link: 'https://www.suissedigital.ch'
     }
@@ -195,8 +201,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
 
   images_monitoring = [
-    { src: 'assets/provisioning/screenshots/Monitoring2.png', caption: 'Downstream Monitoring' },
     { src: 'assets/provisioning/screenshots/Monitoring3.png', caption: 'Downstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring2.png', caption: 'Downstream Monitoring' },
 
     { src: 'assets/provisioning/screenshots/Monitoring1.png', caption: 'Upstream Monitoring' },
     { src: 'assets/provisioning/screenshots/Monitoring5.png', caption: 'Error Monitoring' },

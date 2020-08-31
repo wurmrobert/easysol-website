@@ -21,6 +21,11 @@
     }
 
 
+    .divider {
+        background-color: white;
+    }
+
+
     
 
     .demo-request-content {
@@ -41,7 +46,7 @@
         margin-top: 25px;
 
         .sub-descr {
-            font-size: 12px;
+            font-size: 13px;
         }
     }
 
@@ -140,6 +145,11 @@
             margin-top: 70px;
         }
     }
+
+    .service-subtitle {
+        margin-top: -15px;
+        font-size: 13px;
+    }
 }
 
 
@@ -198,6 +208,10 @@
     .title {
         text-align: left;
     }
+
+    button {
+        margin-top: 25px;
+    }
 }
 
 
@@ -211,6 +225,10 @@
 
     .title {
         text-align: left;
+    }
+
+    button {
+        margin-top: 25px;
     }
 }
 
@@ -555,6 +573,11 @@ section {
         // margin-top: 45px;
     }
 
+    .news-text {
+        margin-top: 27px;
+        font-size: 13px;
+    }
+
     .news-slider {
         margin-top: 40px;
 
@@ -895,6 +918,23 @@ section {
 
         .more-content {
             padding-bottom: 20px;
+        }
+    }
+
+    #provisioning-overview {
+        padding: 10px;
+
+        .col {
+            padding: 20px;
+        }
+
+        .cloud-img-wrapper {
+            margin: 0;
+            width: 100%;
+        } 
+
+        img {
+            padding: 0;
         }
     }
 

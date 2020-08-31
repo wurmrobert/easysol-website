@@ -65,7 +65,7 @@
     <p class="title bold">{{'Broadband Device Management' | translate}}</p>
     <hr>
 
-    <div class="section-content uk-child-width-1-4@s uk-text-center" uk-grid
+    <div class="section-content uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center" uk-grid
       uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
       <div class="col uk-padding">
@@ -73,8 +73,8 @@
           (click)="navigateTo('services/isp-services')">
 
 
-        <p class="service-title semi-bold">{{'API' | translate}}</p>
-        <p class="service-subtitle">{{ 'REST-Schnittstelle' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.API' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.API_desc' | translate }}</p>
       </div>
 
 
@@ -82,50 +82,50 @@
 
         <img src="assets/home/easy_provisioning.svg" alt="easy provisioning"
           (click)="navigateTo('services/isp-services')">
-        <p class="service-title semi-bold">{{'ACS' | translate}}</p>
-        <p class="service-subtitle">{{ 'TR-069 Provisionierung' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.ACS' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.ACS_desc' | translate }}</p>
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/home/software_entwicklung.svg" alt="consulting" (click)="navigateTo('services/consulting')">
-        <p class="service-title semi-bold">{{'Monitoring' | translate}}</p>
-        <p class="service-subtitle">{{'IoT Analyse' | translate}}</p>
+        <p class="service-title semi-bold">{{'services.groups.Monitoring' | translate}}</p>
+        <p class="service-subtitle">{{'services.groups.Monitoring_desc' | translate}}</p>
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
-        <p class="service-title semi-bold">{{'IP' | translate}}</p>
-        <p class="service-subtitle">{{ 'Radius & DHCP' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.IP' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.IP_desc' | translate }}</p>
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
-        <p class="service-title semi-bold">{{'Support' | translate}}</p>
-        <p class="service-subtitle">{{'Unterstützung & Consulting' | translate}}</p>
+        <p class="service-title semi-bold">{{'services.groups.Support' | translate}}</p>
+        <p class="service-subtitle">{{'services.groups.Support_desc' | translate}}</p>
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
-        <p class="service-title semi-bold">{{'DOCSIS' | translate}}</p>
-        <p class="service-subtitle">{{ 'TFTP & Bootfile Engine' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.DOCSIS' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.DOCSIS_desc' | translate }}</p>
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
-        <p class="service-title semi-bold">{{'GPON' | translate}}</p>
-        <p class="service-subtitle">{{ 'OLT & ONT Management' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.GPON' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.GPON_desc' | translate }}</p>
       </div>
 
 
       <div class="col uk-padding">
         <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
-        <p class="service-title semi-bold">{{'Extensions' | translate}}</p>
-        <p class="service-subtitle">{{ 'FTTX, DSL, LTE & XG Erweiterungen' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.Extensions' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.Extensions_desc' | translate }}</p>
       </div>
 
 
@@ -261,11 +261,7 @@
     [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" allow="autoplay"
     uk-video="automute: true"></iframe>
 
-  <div class="more-content">
-    <button type="button" class="round-btn orange" (click)="navigateTo('services/isp-services')">
-      {{'_general.more' | translate}}
-    </button>
-  </div>
+  
 
 </div>
 
@@ -278,10 +274,16 @@
 
       <div class="col uk-padding">
         <app-mac-slideshow [images]="images_provisioning" [startTimeout]="0"></app-mac-slideshow>
-        <button *ngIf="!showProvisioningVideoTabs" (click)="showProvVideoTab()" class="play-btn" type="button">
+        
+        <!-- <button *ngIf="!showProvisioningVideoTabs" (click)="showProvVideoTab()" class="play-btn" type="button">
           <img src="assets/icons/play.svg">
           Play Videos
+        </button> -->
+
+        <button *ngIf="!showProvisioningVideoTabs" (click)="showProvVideoTab()"  class="round-btn orange" type="button">
+          {{'_general.more' | translate}}
         </button>
+
       </div>
 
       <div class="col uk-padding">
@@ -435,10 +437,15 @@
 
       <div class="col uk-padding">
         <app-mac-slideshow [images]="images_customer" [startTimeout]="2000"></app-mac-slideshow>
-        <button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTab()" class="play-btn" type="button">
+        <!-- <button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTab()" class="play-btn" type="button">
           <img src="assets/icons/play.svg">
           Play Videos
+        </button> -->
+
+        <button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTab()"  class="round-btn orange" type="button">
+          {{'_general.more' | translate}}
         </button>
+
       </div>
 
     </div>
@@ -694,7 +701,7 @@
                   <div *ngFor="let p of post.imgs; let i = index;" class="img-dot" (click)="onNewsDotClicked(post)" [class.active]="i === post.imgIndex"></div>
                 </div>
 
-                <p>{{ post.text }}</p>
+                <p class="news-text" >{{ post.text }}</p>
 
                 <div class="bottom-container">
 
@@ -796,6 +803,13 @@
     <div class="section-content uk-child-width-1-5@s uk-text-center" uk-grid
       uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
+
+      <div class="col uk-padding">
+        <img src="assets/partners/kabelplus.png" alt="easy provisioning" style="height: 35px; margin-top: 10px;"
+          (click)="openInNewTab('https://www.kabelplus.at/')">
+      </div>
+
+
       <div class="col uk-padding">
         <img src="assets/partners/hall.jpg" alt="easy provisioning" (click)="openInNewTab('http://www.citynet.at')">
       </div>
@@ -806,6 +820,11 @@
           (click)="openInNewTab('https://www.kufnet.at')">
       </div>
 
+
+      <div class="col uk-padding">
+        <img src="assets/partners/kliksafe.svg" alt="easy provisioning" style="margin-top: 5px;"
+          (click)="openInNewTab('https://kliksafe.nl')">
+      </div>
 
       <div class="col uk-padding">
         <img src="assets/partners/cosys.png" alt="easy provisioning" style="height: 40px; margin-top: 5px;"
@@ -826,7 +845,7 @@
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/experts.png" alt="easy provisioning"
+        <img src="assets/partners/luwy.png" alt="easy provisioning" style="margin-top: -12px; height: 64px;"
           (click)="openInNewTab('https://www.kremstalnet.at')">
       </div>
 
@@ -835,21 +854,21 @@
           (click)="openInNewTab('https://www.webspeed.at')">
       </div>
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/gibsolutions.svg" alt="easy provisioning"
           (click)="openInNewTab('https://www.gib-solutions.ch')">
-      </div>
+      </div> -->
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/iwb.svg" alt="easy provisioning" style="height: 35px"
           (click)="openInNewTab('https://www.iwb.ch')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/gerlos.png" alt="easy provisioning" style="height: 50px;"
           (click)="openInNewTab('http://www.gerlos.tirol.gv.at/Kabel-TV_Gerlos')">
-      </div>
+      </div> -->
 
 
       <div class="col uk-padding">
@@ -857,80 +876,81 @@
       </div>
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/penet.png" alt="easy provisioning" (click)="openInNewTab('https://penet.at/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/hoi.png" alt="easy provisioning" style="height: 40px;"
           (click)="openInNewTab('https://hoi.li/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/bkdat.png" alt="easy provisioning" (click)="openInNewTab('http://www.bkdat.net/')">
-      </div>
+      </div> -->
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/stw-kapfenberg.jpg" alt="easy provisioning"
           (click)="openInNewTab('https://www.stadtwerke-kapfenberg.at/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/netopsie.png" alt="easy provisioning"
           (click)="openInNewTab('https://www.netopsie.de/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/etech.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
           (click)="openInNewTab('https://www.etech.at/')">
-      </div>
+      </div> -->
 
       <!-- <div class="col uk-padding">
         <img src="assets/partners/ewerk-neumarkt.jpg" alt="easy provisioning"
         (click)="openInNewTab('https://www.ewerk-neumarkt.at/')">
       </div> -->
 
-      <div class="col uk-padding">
-        <img src="assets/partners/kabelplus.png" alt="easy provisioning" style="height: 35px; margin-top: 5px;"
-          (click)="openInNewTab('https://www.kabelplus.at/')">
-      </div>
+      
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/stw-baden.jpg" alt="easy provisioning" style="height: 47px;"
           (click)="openInNewTab('https://www.stadtwerke-baden-baden.de/')">
-      </div>
+      </div> -->
 
-      <div class="col uk-padding">
+
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/matrix.png" alt="easy provisioning" style="height: 32px; margin-top: 6px;"
           (click)="openInNewTab('https://www.matrix.nl/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/asak.png" alt="easy provisioning" style="margin-top: -28px; height: 100px;"
           (click)="openInNewTab('https://www.asak.at/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/antec.png" alt="easy provisioning" style="height: 120px; margin-top: -39px;"
           (click)="openInNewTab('https://www.antec-servicepool.de/')">
-      </div>
+      </div> -->
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/cable4.png" alt="easy provisioning" (click)="openInNewTab('https://www.cable4.de')">
-      </div>
+      </div> -->
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/teletronic.png" alt="easy provisioning" style="margin-top: -9px;"
           (click)="openInNewTab('https://teletronic.at')">
-      </div>
+      </div> -->
+
+
+      
 
 
 
@@ -949,9 +969,9 @@
         <img src="assets/partners/konzeptum.jpg" alt="konzeptum" (click)="openInNewTab('https://www.konzeptum.de')" style="margin-top: 18px;">
       </div>
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/agis.png" alt="agis" (click)="openInNewTab('https://web.agis.ch/')">
-      </div>
+      </div> -->
 
       <div class="col uk-padding">
         <img src="assets/partners/ulysses.png" alt="ulysses" (click)="openInNewTab('http://www.ulysses-erp.com/')" style="height: 40px; margin-top: 7px;">
@@ -966,9 +986,9 @@
       </div>
 
 
-      <div class="col uk-padding">
+      <!-- <div class="col uk-padding">
         <img src="assets/partners/dimari.png" alt="dimari" (click)="openInNewTab('https://www.dimari.de')">
-      </div>
+      </div> -->
 
       <div class="col uk-padding">
         <img src="assets/partners/devoted.png" alt="devoted" (click)="openInNewTab('https://devoted.dev/')" style="height: 25px; margin-top: 10px;">

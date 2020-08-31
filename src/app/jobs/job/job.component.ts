@@ -98,13 +98,14 @@ export class JobComponent implements OnInit, OnDestroy {
     this.routerParamsSubscription.unsubscribe();
   }
 
-  loadCompleted() {
+  loadCompleted(e?: any) {
+    console.log('loadCompleted...', e);
     this.pdfVisibility = 'shown';
     this.spinnerVisibility = 'hidden';
   }
 
-  onLoadError() {
-    console.log('onLoadError');
+  onLoadError(e?: any) {
+    console.log('onLoadError: ', e);
     this.noAvaliable = true;
     this.loadCompleted();
   }
