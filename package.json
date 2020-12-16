@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod",
-    "s": "ng s",
-    "serve": "ng s"
+    "s": "ng serve --port=4201",
+    "serve": "ng serve --port=4201"
   },
   "private": true,
   "dependencies": {

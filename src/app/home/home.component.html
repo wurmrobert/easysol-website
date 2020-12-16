@@ -185,7 +185,7 @@
     <div class="col uk-padding">
 
       <div class="cloud-img-wrapper">
-        <img src="assets/home/provisioning_cloud_white.svg" alt="acs-provisioning">
+        <img src="assets/home/provisioning_cloud_white_v2.svg" alt="acs-provisioning">
       </div>
 
     </div>
@@ -257,9 +257,9 @@
 
 
   <iframe
-    src="https://www.youtube.com/embed/pBAn83-h9lA?autoplay=1&amp;mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-    [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" allow="autoplay"
-    uk-video="automute: true"></iframe>
+    src="https://www.youtube.com/embed/pBAn83-h9lA?mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+    [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent"
+    uk-video="autoplay: inview; automute: true"></iframe>
 
   
 
@@ -294,6 +294,7 @@
           <li><span>{{'services.isp.easyprov.provisioning.feature2' | translate}}</span></li>
           <li><span>{{'services.isp.easyprov.provisioning.feature3' | translate}}</span></li>
           <li><span>{{'services.isp.easyprov.provisioning.feature4' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.provisioning.feature5' | translate}}</span></li>
         </ul>
 
         <p class="descr">{{'services.isp.easyprov.provisioning.descr' | translate}}
@@ -459,18 +460,18 @@
 
 
     <ul uk-tab>
-      <li><a href="">{{'services.isp.easyprov.management.locations' | translate}}</a></li>
       <li><a href="">{{'services.isp.easyprov.management.docs-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.management.locations' | translate}}</a></li>
     </ul>
     <ul class="uk-switcher" #managVideoContent>
       <li>
         <video controls playsinline uk-video>
-          <source src="/assets/provisioning/videos/Standorte.mov" type="video/mp4">
+          <source src="/assets/provisioning/videos/Docs.mov" type="video/mp4">
         </video>
       </li>
       <li>
         <video controls playsinline uk-video>
-          <source src="/assets/provisioning/videos/Docs.mov" type="video/mp4">
+          <source src="/assets/provisioning/videos/Standorte.mov" type="video/mp4">
         </video>
       </li>
     </ul>
@@ -480,10 +481,94 @@
 
 
 
+<section id="geo-module" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+  <div class="uk-container">
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+      <div class="col uk-padding">
+        <!-- <app-mac-slideshow [images]="images_ip" [startTimeout]="4000"></app-mac-slideshow> -->
+
+        <iframe
+      src="https://www.youtube.com/embed/TDMsfzZ6Zto?mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;autoplay=0"
+      [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" uk-video="autoplay: false; automute: true"></iframe>
+
+      </div>
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.geo.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.geo.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.geo.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.geo.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.geo.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.geo.descr' | translate}}
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="ticket-module" class="gray" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+  <div class="uk-container">
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.ticket.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.ticket.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ticket.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ticket.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ticket.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.ticket.descr' | translate}}
+        </p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <app-mac-slideshow [images]="images_ticket" [startTimeout]="2000"></app-mac-slideshow>
+      </div>
+
+    </div>
 
 
 
+  </div>
 
+
+  <ng-container *ngIf="showManagementVideoTabs">
+
+
+    <ul uk-tab>
+      <li><a href="">{{'services.isp.easyprov.management.docs-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.management.locations' | translate}}</a></li>
+    </ul>
+    <ul class="uk-switcher" #managVideoContent>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Docs.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Standorte.mov" type="video/mp4">
+        </video>
+      </li>
+    </ul>
+
+  </ng-container>
+</section>
 
 
 
@@ -797,7 +882,7 @@
   <div class="uk-container">
 
 
-    <p class="title bold">{{'_general.our_customers' | translate}}</p>
+    <p class="title bold">{{'_general.references' | translate}}</p>
     <hr>
 
     <div class="section-content uk-child-width-1-5@s uk-text-center" uk-grid
@@ -833,7 +918,7 @@
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/3starsnet.png" alt="easy provisioning" style="height: 50px;"
+        <img src="assets/partners/sewan.png" alt="easy provisioning" style="height: 50px;"
           (click)="openInNewTab('https://www.3starsnet.com')">
       </div>
 
@@ -849,20 +934,30 @@
           (click)="openInNewTab('https://www.kremstalnet.at')">
       </div>
 
-      <div class="col uk-padding">
-        <img src="assets/partners/webspeed.png" alt="easy provisioning"
-          (click)="openInNewTab('https://www.webspeed.at')">
-      </div>
+      
 
-      <!-- <div class="col uk-padding">
+      
+
+      <div class="col uk-padding">
         <img src="assets/partners/gibsolutions.svg" alt="easy provisioning"
           (click)="openInNewTab('https://www.gib-solutions.ch')">
-      </div> -->
+      </div>
 
-      <!-- <div class="col uk-padding">
-        <img src="assets/partners/iwb.svg" alt="easy provisioning" style="height: 35px"
-          (click)="openInNewTab('https://www.iwb.ch')">
-      </div> -->
+
+      
+
+      <div class="col uk-padding">
+        <img src="assets/partners/bkdat.png" alt="easy provisioning" (click)="openInNewTab('http://www.bkdat.net/')" style="height: 45px;">
+      </div>
+
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/webspeed.png" alt="easy provisioning"
+          (click)="openInNewTab('https://brandstetter-kabelmedien.at')">
+      </div>
+
+      
 
 
       <!-- <div class="col uk-padding">
@@ -876,8 +971,8 @@
       </div>
 
 
-      <div class="col uk-padding">
-        <img src="assets/partners/penet.png" alt="easy provisioning" (click)="openInNewTab('https://penet.at/')">
+      <div class="col uk-padding"  >
+        <img src="assets/partners/penet.png" alt="easy provisioning" (click)="openInNewTab('http://penet.at/')" style="height: 40px; margin-top: 5px;">
       </div>
 
 
@@ -888,14 +983,20 @@
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/bkdat.png" alt="easy provisioning" (click)="openInNewTab('http://www.bkdat.net/')" style="height: 45px;">
+        <img src="assets/partners/iwb.svg" alt="easy provisioning" style="height: 35px"
+          (click)="openInNewTab('https://www.iwb.ch')">
       </div>
 
+      
       <!-- <div class="col uk-padding">
         <img src="assets/partners/stw-kapfenberg.jpg" alt="easy provisioning"
           (click)="openInNewTab('https://www.stadtwerke-kapfenberg.at/')">
       </div> -->
 
+      <div class="col uk-padding">
+        <img src="assets/partners/etech.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.etech.at/')">
+      </div>
 
       <div class="col uk-padding">
         <img src="assets/partners/netopsie_technologies_Logo.gif" alt="easy provisioning"
@@ -903,10 +1004,7 @@
       </div>
 
 
-      <!-- <div class="col uk-padding">
-        <img src="assets/partners/etech.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
-          (click)="openInNewTab('https://www.etech.at/')">
-      </div> -->
+      
 
       <!-- <div class="col uk-padding">
         <img src="assets/partners/ewerk-neumarkt.jpg" alt="easy provisioning"
@@ -929,28 +1027,31 @@
 
 
       <div class="col uk-padding">
-        <img src="assets/partners/asak.png" alt="easy provisioning" style="margin-top: -40px; height: 100px;"
+        <img src="assets/partners/asak.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
           (click)="openInNewTab('https://www.asak.at/')">
       </div>
 
 
-      <!-- <div class="col uk-padding">
-        <img src="assets/partners/antec.png" alt="easy provisioning" style="height: 120px; margin-top: -39px;"
+      <div class="col uk-padding">
+        <img src="assets/partners/antec.png" alt="easy provisioning" style="height: 35px;"
           (click)="openInNewTab('https://www.antec-servicepool.de/')">
-      </div> -->
+      </div>
 
 
-      <!-- <div class="col uk-padding">
-        <img src="assets/partners/cable4.png" alt="easy provisioning" (click)="openInNewTab('https://www.cable4.de')">
-      </div> -->
-
-      <!-- <div class="col uk-padding">
-        <img src="assets/partners/teletronic.png" alt="easy provisioning" style="margin-top: -9px;"
+      <div class="col uk-padding">
+        <img src="assets/partners/teletronic.png" alt="easy provisioning"
           (click)="openInNewTab('https://teletronic.at')">
-      </div> -->
+      </div>
 
 
-      
+      <div class="col uk-padding">
+        <img src="assets/partners/telewalfer.png" alt="easy provisioning"
+          (click)="openInNewTab('https://www.telewalfer.lu')">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/cable4.png" alt="easy provisioning" (click)="openInNewTab('https://www.cable4.de')">
+      </div>
 
 
 
@@ -989,14 +1090,14 @@
       </div>
 
 
-      <!-- <div class="col uk-padding">
-        <img src="assets/partners/dimari.png" alt="dimari" (click)="openInNewTab('https://www.dimari.de')">
-      </div> -->
-
-      
-
+    
       <div class="col uk-padding">
         <img src="assets/partners/agis.png" alt="agis" (click)="openInNewTab('https://agis.ch/')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/dimari.png" alt="dimari" (click)="openInNewTab('https://www.dimari.de')">
       </div>
 
     </div>

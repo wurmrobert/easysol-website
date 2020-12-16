@@ -215,24 +215,6 @@
 }
 
 
-
-#provisioning-customer {
-    // padding-left: 100px;
-    // padding-right: 100px;
-    // padding-top: 5%;
-    // padding-bottom: 5%;    
-
-
-    .title {
-        text-align: left;
-    }
-
-    button {
-        margin-top: 25px;
-    }
-}
-
-
 #provisioning-ip {
 
     .title {
@@ -257,6 +239,52 @@
     margin-top: 0;
     
 }
+
+
+
+#provisioning-customer {
+    // padding-left: 100px;
+    // padding-right: 100px;
+    // padding-top: 5%;
+    // padding-bottom: 5%;    
+
+
+    .title {
+        text-align: left;
+    }
+
+    button {
+        margin-top: 25px;
+    }
+}
+
+
+
+#geo-module {
+    .title {
+        text-align: left;
+    }
+
+    button {
+        margin-top: 25px;
+    }
+
+    iframe {
+        height: 290px;
+    }
+}
+
+#ticket-module {
+    .title {
+        text-align: left;
+    }
+
+    button {
+        margin-top: 25px;
+    }
+}
+
+
 
 video {
     width: 100%;
@@ -359,6 +387,8 @@ section {
 
 
 #about-us {
+    padding-top: 25px;
+    
     .col {
         text-align: left;
     }

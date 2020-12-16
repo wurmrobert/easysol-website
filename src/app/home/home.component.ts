@@ -164,7 +164,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
       title: 'events.6.title',
       subtitle: 'events.6.subtitle',
       img: '/assets/events/SuisseDigital.png',
-      link: 'https://www.suissedigital.ch'
+      link: 'https://www.suissedigital.ch',
+      canceled: true
     }
   ]
 
@@ -185,13 +186,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   images_customer = [
-    { src: 'assets/provisioning/screenshots/Locations.png', caption: 'Locations' },
     { src: 'assets/provisioning/screenshots/API Docs.png', caption: 'API' },
+    { src: 'assets/provisioning/screenshots/Locations.png', caption: 'Locations' },
     { src: 'assets/provisioning/screenshots/Globale Services.png', caption: 'Global Services' },
     { src: 'assets/provisioning/screenshots/Infrastructure.png', caption: 'Infrastruktur' },
     { src: 'assets/provisioning/screenshots/Dashboard Editor.png', caption: 'Dashboard Editor' },
-
-
   ];
 
   images_ip = [
@@ -208,7 +207,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     { src: 'assets/provisioning/screenshots/Monitoring5.png', caption: 'Error Monitoring' },
     { src: 'assets/provisioning/screenshots/Monitoring6.png', caption: 'Upstream Monitoring' },
     { src: 'assets/provisioning/screenshots/Monitoring7.png', caption: 'Status Monitoring' }
+  ];
 
+  images_ticket = [
+    { src: 'assets/provisioning/screenshots/Ticketing1.png', caption: 'Ticketing' },
+    { src: 'assets/provisioning/screenshots/Ticketing2.png', caption: 'Ticketing' },
+    { src: 'assets/provisioning/screenshots/Ticketing3.png', caption: 'Ticketing' }
   ];
 
   news_posts = News.getNews();
