@@ -1,6 +1,11 @@
 @import 'src/style/colors';
 @import 'src/style/mobile';
 
+
+#home {
+    min-height: 402px;
+}
+
 .home-content {
     margin-top: 65px;
 
@@ -94,7 +99,7 @@
 
 
 #services {
-
+    min-height: 497px;
     margin-top: 80px;
 
     .uk-padding {
@@ -205,6 +210,8 @@
 
 
 #provisioning-provisioning {
+    min-height: 534px;
+
     .title {
         text-align: left;
     }
@@ -216,13 +223,14 @@
 
 
 #provisioning-ip {
-
+    min-height: 504px;
     .title {
         text-align: left;
     }
 }
 
 #provisioning-monitoring {
+    min-height: 478px;
 
     // padding-left: 100px;
     // padding-right: 100px;
@@ -243,11 +251,7 @@
 
 
 #provisioning-customer {
-    // padding-left: 100px;
-    // padding-right: 100px;
-    // padding-top: 5%;
-    // padding-bottom: 5%;    
-
+    min-height: 509px;
 
     .title {
         text-align: left;
@@ -261,6 +265,7 @@
 
 
 #geo-module {
+    min-height: 445px;
     .title {
         text-align: left;
     }
@@ -275,6 +280,7 @@
 }
 
 #ticket-module {
+    min-height: 528px;
     .title {
         text-align: left;
     }
@@ -388,6 +394,7 @@ section {
 
 #about-us {
     padding-top: 25px;
+    min-height: 1410px;
 
     .col {
         text-align: left;
@@ -594,6 +601,7 @@ section {
 #news {
     padding-top: 45px;
     padding-bottom: 45px;
+    min-height: 681px;
 
     .uk-container-expand {
         max-width: 1920px;
@@ -625,6 +633,9 @@ section {
             margin-top: 20px;
             margin-bottom: 20px;
 
+            ngui-in-view {
+                min-height: 120px;
+            }
 
             .uk-card-body {
                 padding: 15px;
@@ -689,6 +700,7 @@ section {
 }
 
 #events {
+    min-height: 2238px;
 
     .event-content {
         padding-top: 40px;
@@ -725,7 +737,7 @@ section {
 
 #partner {
     padding-bottom: 80px;
-
+    min-height: 1557px;
 
     img {
         filter: grayscale(100%);
@@ -896,6 +908,14 @@ section {
 
 @media screen and (max-width: $mobile-break-point) { 
 
+    #news, #services, #provisioning-provisioning, #provisioning-ip, #provisioning-monitoring,  #provisioning-customer, #geo-module, #ticket-module {
+        min-height: auto;
+    }
+
+    #home {
+        min-height: 640px;
+    }
+
     .home-content {
         margin-top: 0;
     }
@@ -919,7 +939,7 @@ section {
         top: 80px !important;
     }
 
-    #services { 
+    #services {
         .section-content {
 
             img, svg {

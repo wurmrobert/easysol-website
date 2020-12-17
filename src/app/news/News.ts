@@ -2,6 +2,18 @@ export class News {
     public static getNews() {
         return [
             {
+                title: 'Frohe Weihnachten 2020',
+                facebook: 'https://www.facebook.com/easysolutionsgmbh',
+                date: Date.parse('December 24 2020'),
+                imgs: [
+                    'assets/news/13/Weihnachten2020.png',
+                ],
+                imgIndex: 0,
+                text: `Liebe Kunden, Partner & Freunde! Wir wünschen Ihnen/Euch allen Frohe Weihnachten und erholsame Feiertage! Auch heuer sehen wir wieder von Geschenken ab und unterstützen stattdessen die
+                Österreichische Krebshilfe mit einer Spende. Rückblickend bedanken wir uns auf diesem Wege bei
+                allen für die gute Zusammenarbeit.`
+            },
+            {
                 title: 'Praktikaten 2020',
                 facebook: 'https://www.facebook.com/easysolutionsgmbh/posts/576659019681997',
                 date: Date.parse('Jule 30 2020'),
