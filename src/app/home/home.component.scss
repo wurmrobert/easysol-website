@@ -388,7 +388,7 @@ section {
 
 #about-us {
     padding-top: 25px;
-    
+
     .col {
         text-align: left;
     }
@@ -729,6 +729,7 @@ section {
 
     img {
         filter: grayscale(100%);
+        cursor: pointer;
 
         &:hover {
             filter: none;
