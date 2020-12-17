@@ -2,7 +2,7 @@
 
 
 
-  <div class="home-img-content">
+  <!-- <div class="home-img-content">
     <div class="home-img-wrapper">
       <img src="assets/home/Home_Screen.png" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
     </div>
@@ -12,9 +12,49 @@
     <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText"
       class="monserat-extra-bold">{{headerTexts[currentHeaderIndex]
       | translate}}</p>
+  </div> -->
+
+  <div class="uk-container">
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+      <div [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+
+        <p class="descr">
+          Provider Management Software
+        </p>
+
+        <h1><strong>{{'The platform for a connected world.' | translate}}</strong></h1>
+
+        <span class="divider"></span>
+
+        <div class="demo-request-content">
+          <button type="button" class="round-btn" (click)="onRequestDemoClicked()">
+            {{'Request a demo' | translate}}
+          </button>
+        </div>
+
+        <div class="sub-descr-content">
+          <p typingAnimation [typeSpeed]="headlineTypeSpeed" [startDelay]="0" *ngIf="showHeaderText" class="sub-descr">{{headerTexts[currentHeaderIndex]
+      | translate}}</p>
+
+        </div>
+
+      </div>
+
+      <div class="cloud-col" [class.col]="!mobileMode" [class.uk-padding]="!mobileMode">
+        <ngui-in-view class="cloud-img-wrapper">
+          <img *ngIf src="assets/home/v3/home_grafic.png" (load)="onLoadHomeEnded()" [class.loaded]="homeImgLoaded">
+        </ngui-in-view>
+      </div>
+    </div>
+
+
   </div>
 
+
+
 </div>
+
 
 
 
@@ -22,10 +62,10 @@
   <div class="uk-container">
 
 
-    <p class="title bold">{{'services.title' | translate}}</p>
+    <p class="title bold">{{'Broadband Device Management' | translate}}</p>
     <hr>
 
-    <div class="section-content uk-child-width-expand@s uk-text-center" uk-grid
+    <div class="section-content uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center" uk-grid
       uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
       <div class="col uk-padding">
@@ -33,8 +73,8 @@
           (click)="navigateTo('services/isp-services')">
 
 
-        <p class="service-title semi-bold">{{'services.dev.title' | translate}}</p>
-        <p class="service-subtitle">{{ 'services.dev.subtitle' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.API' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.API_desc' | translate }}</p>
       </div>
 
 
@@ -42,31 +82,66 @@
 
         <img src="assets/home/easy_provisioning.svg" alt="easy provisioning"
           (click)="navigateTo('services/isp-services')">
-
-
-        <p class="service-title semi-bold">{{'_general.easyprovisioning' | translate}}</p>
-        <p class="service-subtitle">{{ 'services.isp.subtitle' | translate }}</p>
+        <p class="service-title semi-bold">{{'services.groups.ACS' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.ACS_desc' | translate }}</p>
       </div>
 
 
       <div class="col uk-padding">
-
-        <img src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
-
-
-        <p class="service-title semi-bold">{{'services.consulting.title' | translate}}</p>
-        <p class="service-subtitle">{{'services.consulting.subtitle' | translate}}</p>
+        <img src="assets/home/software_entwicklung.svg" alt="consulting" (click)="navigateTo('services/consulting')">
+        <p class="service-title semi-bold">{{'services.groups.Monitoring' | translate}}</p>
+        <p class="service-subtitle">{{'services.groups.Monitoring_desc' | translate}}</p>
       </div>
 
+
+      <div class="col uk-padding">
+        <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
+        <p class="service-title semi-bold">{{'services.groups.IP' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.IP_desc' | translate }}</p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/home/consulting.svg" alt="consulting" (click)="navigateTo('services/consulting')">
+        <p class="service-title semi-bold">{{'services.groups.Support' | translate}}</p>
+        <p class="service-subtitle">{{'services.groups.Support_desc' | translate}}</p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
+        <p class="service-title semi-bold">{{'services.groups.DOCSIS' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.DOCSIS_desc' | translate }}</p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
+        <p class="service-title semi-bold">{{'services.groups.GPON' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.GPON_desc' | translate }}</p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/home/software_entwicklung.svg" alt="easy provisioning">
+        <p class="service-title semi-bold">{{'services.groups.Extensions' | translate}}</p>
+        <p class="service-subtitle">{{ 'services.groups.Extensions_desc' | translate }}</p>
+      </div>
+
+
+
+
+
     </div>
-    <div class="scroll-down-content">
+
+
+
+
+    <!-- <div class="scroll-down-content">
       <button type="button" class="round-btn orange" [routerLink]="''" [fragment]="'provisioning'">
         Scroll Down
       </button>
 
-      <!-- <ngui-in-view>
-        <img *ngIf src="assets/arrow_down.svg" alt="down">
-      </ngui-in-view> -->
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.94 26.89">
         <defs>
           <style>
@@ -99,17 +174,25 @@
           </g>
         </g>
       </svg>
-
-
-    </div>
+    </div> -->
   </div>
 
 </section>
 
 
+<section id="provisioning-overview" class="dark polygon-XxxX">
+  <div class="uk-container">
+    <div class="col uk-padding">
 
+      <div class="cloud-img-wrapper">
+        <img src="assets/home/provisioning_cloud_white_v2.png" alt="acs-provisioning">
+      </div>
 
+    </div>
+  </div>
+</section>
 
+<!-- 
 <section appNavSection id="provisioning" class="dark polygon-XXxx">
   <div class="uk-container">
     <p class="title bold">{{'_general.easyprovisioning' | translate}}</p>
@@ -143,26 +226,349 @@
 
 
   </div>
+</section> -->
+
+<section id="provisioning-title">
+
+  <div class="uk-container uk-container-xsmall">
+
+    <!-- <p class="title extra-bold">{{ '_general.easyprovisioning' | translate }}</p> -->
+    <p class="title bold">{{'_general.easyprovisioning' | translate}}</p>
+    <hr>
+
+    <div class="col uk-padding">
+      <ngui-in-view>
+        <img *ngIf src="assets/home/easy_provisioning.svg" alt="easy provisioning" class="provisioning-icon">
+      </ngui-in-view>
+
+
+      <p class="provisioning-subtitle extra-bold">{{'services.isp.easyprov.header' | translate}}</p>
+      <p class="provisioning-subtext bold">{{'services.isp.easyprov.subheader' | translate}}</p>
+    </div>
+
+  </div>
+
+
 </section>
-
-
 
 <div class="youtube-container">
 
-  <iframe
-    src="https://www.youtube.com/embed/pBAn83-h9lA?autoplay=1&amp;mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-    [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" allow="autoplay"
-    uk-video="automute: true"></iframe>
 
-    <div class="more-content">
-      <button type="button" class="round-btn orange" (click)="navigateTo('services/isp-services')">
-        {{'_general.more' | translate}}
-      </button>
-    </div>
+
+
+  <iframe
+    src="https://www.youtube.com/embed/pBAn83-h9lA?mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
+    [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent"
+    uk-video="autoplay: inview; automute: true"></iframe>
+
+  
 
 </div>
 
 
+<section id="provisioning-provisioning" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300"
+  [class.showVideo]="showProvisioningVideoTabs">
+  <div class="uk-container">
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+      <div class="col uk-padding">
+        <app-mac-slideshow [images]="images_provisioning" [startTimeout]="0"></app-mac-slideshow>
+        
+        <!-- <button *ngIf="!showProvisioningVideoTabs" (click)="showProvVideoTab()" class="play-btn" type="button">
+          <img src="assets/icons/play.svg">
+          Play Videos
+        </button> -->
+
+        <button *ngIf="!showProvisioningVideoTabs" (click)="showProvVideoTab()"  class="round-btn orange" type="button">
+          {{'_general.more' | translate}}
+        </button>
+
+      </div>
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.provisioning.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.provisioning.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.provisioning.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.provisioning.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.provisioning.feature4' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.provisioning.feature5' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.provisioning.descr' | translate}}
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <ng-container *ngIf="showProvisioningVideoTabs">
+
+    <ul uk-tab>
+      <li><a href="">{{'services.isp.easyprov.provisioning.remote-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.provisioning.internet-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.provisioning.bridge-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.provisioning.wlan-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.provisioning.voice-service' | translate}}</a></li>
+    </ul>
+    <ul class="uk-switcher" #provVideoContent>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Fernzugriff Service.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Internet Service.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Bridge Service.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Wifi Service.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Voice Service.mov" type="video/mp4">
+        </video>
+      </li>
+    </ul>
+
+  </ng-container>
+
+
+</section>
+
+
+
+<section id="provisioning-monitoring" class="gray" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+  <div class="uk-container">
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.monitoring.title' | translate}}</p>
+        <!-- <div class="beta-tab">{{'services.isp.screenshot_titles.beta_tag' | translate}}</div> -->
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.monitoring.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.monitoring.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.monitoring.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.monitoring.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.monitoring.descr' | translate}}
+        </p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <app-mac-slideshow [images]="images_monitoring" [startTimeout]="6000"></app-mac-slideshow>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="provisioning-ip" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300"
+  [class.parent-showVideo]="showManagementVideoTabs">
+  <div class="uk-container">
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+      <div class="col uk-padding">
+        <app-mac-slideshow [images]="images_ip" [startTimeout]="4000"></app-mac-slideshow>
+      </div>
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.ip.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.ip.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ip.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ip.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ip.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.ip.descr' | translate}}
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="provisioning-customer" class="gray" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300"
+  [class.showVideo]="showManagementVideoTabs">
+  <div class="uk-container">
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.management.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.management.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.management.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.management.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.management.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.management.descr' | translate}}
+        </p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <app-mac-slideshow [images]="images_customer" [startTimeout]="2000"></app-mac-slideshow>
+        <!-- <button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTab()" class="play-btn" type="button">
+          <img src="assets/icons/play.svg">
+          Play Videos
+        </button> -->
+
+        <button *ngIf="!showManagementVideoTabs" (click)="showManagementVideoTab()"  class="round-btn orange" type="button">
+          {{'_general.more' | translate}}
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+  <ng-container *ngIf="showManagementVideoTabs">
+
+
+    <ul uk-tab>
+      <li><a href="">{{'services.isp.easyprov.management.docs-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.management.locations' | translate}}</a></li>
+    </ul>
+    <ul class="uk-switcher" #managVideoContent>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Docs.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Standorte.mov" type="video/mp4">
+        </video>
+      </li>
+    </ul>
+
+  </ng-container>
+</section>
+
+
+
+<section id="geo-module" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+  <div class="uk-container">
+
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+      <div class="col uk-padding">
+        <!-- <app-mac-slideshow [images]="images_ip" [startTimeout]="4000"></app-mac-slideshow> -->
+
+        <iframe
+      src="https://www.youtube.com/embed/TDMsfzZ6Zto?mute=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;autoplay=0"
+      [width]="'100%'" frameborder="0" allowfullscreen controls playsinline wm-mode="transparent" uk-video="autoplay: false; automute: true"></iframe>
+
+      </div>
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.geo.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.geo.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.geo.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.geo.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.geo.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.geo.descr' | translate}}
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="ticket-module" class="gray" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+  <div class="uk-container">
+    <div class="section-content uk-child-width-expand@s" uk-grid>
+
+
+      <div class="col uk-padding">
+        <p class="title extra-bold">{{'services.isp.easyprov.ticket.title' | translate}}</p>
+
+        <ul class="feature-list extra-bold">
+          <li><span>{{'services.isp.easyprov.ticket.feature1' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ticket.feature2' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ticket.feature3' | translate}}</span></li>
+          <li><span>{{'services.isp.easyprov.ticket.feature4' | translate}}</span></li>
+        </ul>
+
+        <p class="descr">{{'services.isp.easyprov.ticket.descr' | translate}}
+        </p>
+      </div>
+
+
+      <div class="col uk-padding">
+        <app-mac-slideshow [images]="images_ticket" [startTimeout]="2000"></app-mac-slideshow>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+  <ng-container *ngIf="showManagementVideoTabs">
+
+
+    <ul uk-tab>
+      <li><a href="">{{'services.isp.easyprov.management.docs-service' | translate}}</a></li>
+      <li><a href="">{{'services.isp.easyprov.management.locations' | translate}}</a></li>
+    </ul>
+    <ul class="uk-switcher" #managVideoContent>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Docs.mov" type="video/mp4">
+        </video>
+      </li>
+      <li>
+        <video controls playsinline uk-video>
+          <source src="/assets/provisioning/videos/Standorte.mov" type="video/mp4">
+        </video>
+      </li>
+    </ul>
+
+  </ng-container>
+</section>
 
 
 
@@ -173,7 +579,7 @@
     <p class="title bold">{{'about_us.title' | translate}}</p>
     <hr>
 
-    
+
 
 
     <div class="section-content uk-child-width-expand@s" uk-grid>
@@ -270,7 +676,7 @@
 
 
 
-<section appNavSection id="team" class="dark polygon-xxXX">
+<!-- <section appNavSection id="team" class="dark polygon-xxXX">
   <div class="uk-container">
 
 
@@ -344,7 +750,82 @@
     </div>
 
   </div>
+</section> -->
+
+
+<section appNavSection id="news" class="gray">
+  <div [class.uk-container]="!mobileMode" [class.uk-container-expand]="!mobileMode">
+
+    <div>
+
+    
+    <p class="title bold">{{'News' | translate}}</p>
+    <hr>
+
+
+    <div uk-slider="finite: false" class="news-slider">
+
+      <div class="uk-position-relative">
+
+        <div class="uk-slider-container">
+          <ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-grid">
+
+            <li *ngFor="let post of news_posts" class="post-panel">
+
+              <div class="uk-card uk-card-default uk-card-body">
+
+
+                <ngui-in-view>
+
+                  <img *ngIf [src]="post.imgs[post.imgIndex]">
+
+                </ngui-in-view>
+
+
+                <div class="image-dots" *ngIf="post.imgs.length > 1">
+                  <div *ngFor="let p of post.imgs; let i = index;" class="img-dot" (click)="onNewsDotClicked(post)" [class.active]="i === post.imgIndex"></div>
+                </div>
+
+                <p class="news-text" >{{ post.text }}</p>
+
+                <div class="bottom-container">
+
+                  <div class="date">
+                    <p>{{ post.date | date: 'mediumDate'}}</p>
+                  </div>
+
+                  <div class="fb" *ngIf="post.facebook">
+                    <p class="small"><i class="fa fa-facebook-official"></i> <a [href]="post.facebook">Auf Facebook
+                        ansehen</a></p>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="uk-position-center uk-panel"></div>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+      </div>
+
+      <!-- <ul class="uk-slider-nav uk-dotnav"></ul> -->
+
+
+
+    </div>
+
+  </div>
+
+  </div>
 </section>
+
 
 
 <section appNavSection id="events">
@@ -361,7 +842,10 @@
         <div *ngFor="let event of events" class="event-content">
 
           <p class="title extra-bold">{{ event.title  | translate}}</p>
-          <div class="section-content  uk-child-width-expand@s" uk-grid>
+          <div class="beta-tab" *ngIf="event.canceled">{{'canceled' | translate}}</div>
+
+
+          <div class="section-content  uk-child-width-expand@s" uk-grid [class.canceled]="event.canceled">
 
 
             <div class="col uk-padding">
@@ -401,98 +885,224 @@
     <p class="title bold">{{'_general.references' | translate}}</p>
     <hr>
 
-    <div uk-slider="autoplay: true">
-
-      <div class="uk-position-relative">
-
-        <div class="uk-slider-container">
-
-          <ul class="uk-slider-items uk-child-width-1-4@m uk-grid">
-            <!-- <li>
-              <img style="margin-top: 72px; 
-              margin-left: 0;
-              height: 40px; 
-              padding-left: 0;
-              padding-right: 0;"
-                src="assets/partners/kabelplus.png" alt="">
-              <div class="uk-position-center uk-panel"></div>
-            </li> -->
-
-            
-            
-
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/netcon_logo.svg" (click)="openInNewTab('http://www.netcon.at')" >
-              </ngui-in-view>
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/hall.jpg" (click)="openInNewTab('http://www.citynet.at')">
-              </ngui-in-view>
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/uni_software_plus.png" (click)="openInNewTab('https://www.unisoftwareplus.com')">
-              </ngui-in-view>
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
+    <div class="section-content uk-child-width-1-5@s uk-text-center" uk-grid
+      uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
 
 
-
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/kufnet.png" (click)="openInNewTab('https://www.kufnet.at')">
-              </ngui-in-view>
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-
-            
-
-
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/inext_logo.png" (click)="openInNewTab('https://inext.at')">
-              </ngui-in-view>
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-
-
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/cosys.png" (click)="openInNewTab('https://www.cosys.cc')">
-              </ngui-in-view>
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-
-            
-            <li>
-              <ngui-in-view>
-                <img *ngIf src="assets/partners/3starsnet.png" (click)="openInNewTab('https://www.3starsnet.com/')">
-              </ngui-in-view>
-
-              <div class="uk-position-center uk-panel"></div>
-            </li>
-
-
-          </ul>
-
-
-
-        </div>
-
-        <a class="uk-position-center-left-out" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right-out" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
+      <div class="col uk-padding">
+        <img src="assets/partners/kabelplus.png" alt="easy provisioning" style="height: 35px; margin-top: 10px;"
+          (click)="openInNewTab('https://www.kabelplus.at/')">
       </div>
 
 
+      <div class="col uk-padding">
+        <img src="assets/partners/hall.jpg" alt="easy provisioning" (click)="openInNewTab('http://www.citynet.at')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/kufnet.png" alt="easy provisioning" style="height: 35px; margin-top: 8px;"
+          (click)="openInNewTab('https://www.kufnet.at')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/kliksafe.svg" alt="easy provisioning" style="margin-top: 5px;"
+          (click)="openInNewTab('https://kliksafe.nl')">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/cosys.png" alt="easy provisioning" style="height: 40px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.cosys.cc')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/sewan.png" alt="easy provisioning" style="height: 50px;"
+          (click)="openInNewTab('https://www.3starsnet.com')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/EWG.jpg" alt="easy provisioning" style="height: 60px; margin-top: -8px;"
+          (click)="openInNewTab('https://www.ew-goldbach-hoesbach.de')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/luwy.png" alt="easy provisioning" style="margin-top: -12px; height: 64px;"
+          (click)="openInNewTab('https://www.kremstalnet.at')">
+      </div>
+
+      
+
+      
+
+      <div class="col uk-padding">
+        <img src="assets/partners/gibsolutions.svg" alt="easy provisioning"
+          (click)="openInNewTab('https://www.gib-solutions.ch')">
+      </div>
+
+
+      
+
+      <div class="col uk-padding">
+        <img src="assets/partners/bkdat.png" alt="easy provisioning" (click)="openInNewTab('http://www.bkdat.net/')" style="height: 45px;">
+      </div>
+
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/webspeed.png" alt="easy provisioning"
+          (click)="openInNewTab('https://brandstetter-kabelmedien.at')">
+      </div>
+
+      
+
+
+      <!-- <div class="col uk-padding">
+        <img src="assets/partners/gerlos.png" alt="easy provisioning" style="height: 50px;"
+          (click)="openInNewTab('http://www.gerlos.tirol.gv.at/Kabel-TV_Gerlos')">
+      </div> -->
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/infotech.png" alt="easy provisioning" (click)="openInNewTab('https://inext.at/')" style="height: 45px;">
+      </div>
+
+
+      <div class="col uk-padding"  >
+        <img src="assets/partners/penet.png" alt="easy provisioning" (click)="openInNewTab('http://penet.at/')" style="height: 40px; margin-top: 5px;">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/hoi.png" alt="easy provisioning" style="height: 40px;"
+          (click)="openInNewTab('https://hoi.li/')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/iwb.svg" alt="easy provisioning" style="height: 35px"
+          (click)="openInNewTab('https://www.iwb.ch')">
+      </div>
+
+      
+      <!-- <div class="col uk-padding">
+        <img src="assets/partners/stw-kapfenberg.jpg" alt="easy provisioning"
+          (click)="openInNewTab('https://www.stadtwerke-kapfenberg.at/')">
+      </div> -->
+
+      <div class="col uk-padding">
+        <img src="assets/partners/etech.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.etech.at/')">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/netopsie_technologies_Logo.gif" alt="easy provisioning"
+          (click)="openInNewTab('https://www.netoptv.de')">
+      </div>
+
+
+      
+
+      <!-- <div class="col uk-padding">
+        <img src="assets/partners/ewerk-neumarkt.jpg" alt="easy provisioning"
+        (click)="openInNewTab('https://www.ewerk-neumarkt.at/')">
+      </div> -->
+
+      
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/stw-baden.jpg" alt="easy provisioning" style="height: 65px; margin-top: -15px;"
+          (click)="openInNewTab('https://www.stadtwerke-baden-baden.de/')">
+      </div>
+
+
+      <!-- <div class="col uk-padding">
+        <img src="assets/partners/matrix.png" alt="easy provisioning" style="height: 32px; margin-top: 6px;"
+          (click)="openInNewTab('https://www.matrix.nl/')">
+      </div> -->
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/asak.png" alt="easy provisioning" style="height: 25px; margin-top: 5px;"
+          (click)="openInNewTab('https://www.asak.at/')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/antec.png" alt="easy provisioning" style="height: 35px;"
+          (click)="openInNewTab('https://www.antec-servicepool.de/')">
+      </div>
+
+      
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/telewalfer.png" alt="easy provisioning" style="margin-top: -25px;"
+          (click)="openInNewTab('https://www.telewalfer.lu')">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/cable4.png" alt="easy provisioning" (click)="openInNewTab('https://www.cable4.de')">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/teletronic.png" alt="easy provisioning" style="margin-top: -8px;"
+          (click)="openInNewTab('https://teletronic.at')">
+      </div>
+
+
+      
+
+
+
+    </div>
+
+
+
+
+    <p class="title bold">{{'_general.our_partners' | translate}}</p>
+    <hr>
+
+    <div class="section-content uk-child-width-1-5@s uk-text-center" uk-grid
+      uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300">
+
+      <div class="col uk-padding">
+        <img src="assets/partners/konzeptum.jpg" alt="konzeptum" (click)="openInNewTab('https://www.konzeptum.de')" style="margin-top: 18px;">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/devoted.png" alt="devoted" (click)="openInNewTab('https://devoted.dev/')" style="height: 25px; margin-top: 24px;">
+      </div>
+
+      
+
+      <div class="col uk-padding">
+        <img src="assets/partners/ulysses.png" alt="ulysses" (click)="openInNewTab('http://www.ulysses-erp.com/')" style="height: 40px; margin-top: 7px;">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/uni_software_plus.png" alt="uni_software_plus" (click)="openInNewTab('https://www.unisoftwareplus.com')" style="height: 40px; margin-top: 12px;">
+      </div>
+
+      <div class="col uk-padding">
+        <img src="assets/partners/netcon_logo.svg" alt="netcon" (click)="openInNewTab('https://www.netcon.at')" style="height: 40px; margin-top: 10px;">
+      </div>
+
+
+    
+      <div class="col uk-padding">
+        <img src="assets/partners/agis.png" alt="agis" (click)="openInNewTab('https://agis.ch/')">
+      </div>
+
+
+      <div class="col uk-padding">
+        <img src="assets/partners/dimari.png" alt="dimari" (click)="openInNewTab('https://www.dimari.de')">
+      </div>
 
     </div>
 

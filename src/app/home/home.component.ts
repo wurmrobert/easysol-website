@@ -1,7 +1,8 @@
 import { DisplayDetector, DisplayType } from './../display-detector.service';
 import { NavbarService } from './../navbar/navbar.service';
 import { Router } from '@angular/router';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { News } from '../news/News';
 
 @Component({
   selector: 'app-home',
@@ -12,13 +13,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   showHeaderText = true;
   currentHeaderIndex = 0;
-  headlineTypeSpeed = 0;
+  headlineTypeSpeed = 65; // 0;
 
+  // headerTexts = [
+  //   'home.headline1',
+  //   'home.headline2',
+  //   'home.headline4',
+  //   'home.headline3'
+  // ];
   headerTexts = [
-    'home.headline1',
-    'home.headline2',
-    'home.headline4',
-    'home.headline3'
+    'ACS - TR069 - SNMP - USP - TFTP',
+    'FTTX - DOCSIS - GPON',
+    'DHCP - RADIUS - IP',
+    'PROVISIONING - MONITORING'
   ];
 
   skills = {
@@ -123,32 +130,113 @@ export class HomeComponent implements OnInit, AfterViewInit {
       title: 'events.1.title',
       subtitle: 'events.1.subtitle',
       img: '/assets/events/cabletech.jpg',
-      link: 'https://www.cabletech.at'
+      link: 'https://www.cabletech.at',
+      canceled: true
     },
     {
       title: 'events.2.title',
       subtitle: 'events.2.subtitle',
       img: '/assets/events/breko.png',
-      link: 'https://brekoverband.de/fiberdays19'
+      link: 'https://brekoverband.de/fiberdays19',
+      canceled: true
     },
     {
       title: 'events.3.title',
       subtitle: 'events.3.subtitle',
       img: '/assets/events/anga.png',
-      link: 'http://www.angacom.de/'
+      link: 'http://www.angacom.de/',
+      canceled: true
+    },
+    {
+      title: 'events.5.title',
+      subtitle: 'events.5.subtitle',
+      img: '/assets/events/frk.png',
+      link: 'https://www.breitbandkongress-frk.de/'
     },
     {
       title: 'events.4.title',
       subtitle: 'events.4.subtitle',
       img: '/assets/events/CableDays.jpg',
-      link: 'https://www.wko.at/site/cable-days/start.html'
+      link: 'https://www.wko.at/site/cable-days/start.html',
+      canceled: true
     },
-
+    {
+      title: 'events.6.title',
+      subtitle: 'events.6.subtitle',
+      img: '/assets/events/SuisseDigital.png',
+      link: 'https://www.suissedigital.ch',
+      canceled: true
+    }
   ]
+
+
+  images_provisioning = [
+    // { src: 'assets/provisioning/screenshots/Dashboard.png', caption: 'Dashboard' },
+    { src: 'assets/home/v3/dashboard-overview-browser.png', caption: 'Dashboard' },
+
+    { src: 'assets/provisioning/screenshots/Provisioning.png', caption: 'Services' },
+    { src: 'assets/provisioning/screenshots/Provisioning2.png', caption: 'Services' },
+    { src: 'assets/provisioning/screenshots/ACS-Tasks2.png', caption: 'ACS-Tasks' },
+    { src: 'assets/provisioning/screenshots/ACS-Tasks.png', caption: 'ACS-Workflows' },
+    { src: 'assets/provisioning/screenshots/ACS-Templating.png', caption: 'ACS-Templating' },
+    { src: 'assets/provisioning/screenshots/ACS-Workflows.png', caption: 'ACS-Workflows' },
+    { src: 'assets/provisioning/screenshots/Bootfiles.png', caption: 'Bootfiles' },
+    { src: 'assets/provisioning/screenshots/CPE-Management.png', caption: 'CPE-Management' }
+  ];
+
+
+  images_customer = [
+    { src: 'assets/provisioning/screenshots/API Docs.png', caption: 'API' },
+    { src: 'assets/provisioning/screenshots/Locations.png', caption: 'Locations' },
+    { src: 'assets/provisioning/screenshots/Globale Services.png', caption: 'Global Services' },
+    { src: 'assets/provisioning/screenshots/Infrastructure.png', caption: 'Infrastruktur' },
+    { src: 'assets/provisioning/screenshots/Dashboard Editor.png', caption: 'Dashboard Editor' },
+  ];
+
+  images_ip = [
+    { src: 'assets/provisioning/screenshots/IP-Management.png', caption: 'IP-Management' },
+    { src: 'assets/provisioning/screenshots/Assign IP.png', caption: 'Assign IP' },
+    { src: 'assets/provisioning/screenshots/IP-Ranges.png', caption: 'IP-Ranges' }
+  ];
+
+  images_monitoring = [
+    { src: 'assets/provisioning/screenshots/Monitoring3.png', caption: 'Downstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring2.png', caption: 'Downstream Monitoring' },
+
+    { src: 'assets/provisioning/screenshots/Monitoring1.png', caption: 'Upstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring5.png', caption: 'Error Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring6.png', caption: 'Upstream Monitoring' },
+    { src: 'assets/provisioning/screenshots/Monitoring7.png', caption: 'Status Monitoring' }
+  ];
+
+  images_ticket = [
+    { src: 'assets/provisioning/screenshots/Ticketing1.png', caption: 'Ticketing' },
+    { src: 'assets/provisioning/screenshots/Ticketing2.png', caption: 'Ticketing' },
+    { src: 'assets/provisioning/screenshots/Ticketing3.png', caption: 'Ticketing' }
+  ];
+
+  news_posts = News.getNews();
+
+  onNewsDotClicked(post) {
+    if (post.imgIndex >= post.imgs.length - 1) {
+      post.imgIndex = 0;
+    } else {
+      post.imgIndex++;
+    }
+  }
 
   displayType = DisplayType;
   homeImgLoaded = false;
 
+
+  showProvisioningVideoTabs = false;
+  showManagementVideoTabs = false;
+
+  @ViewChild('provVideoContent', { static: false })
+  provVideoContent: ElementRef;
+
+  @ViewChild('managVideoContent', { static: false })
+  managVideoContent: ElementRef;
 
   constructor(
     private router: Router,
@@ -159,18 +247,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    
+
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       if (window.location.hash) {
         const hash = window.location.hash.split('#');
-        if (hash.length > 1)  {
+        if (hash.length > 1) {
           this.navbarService.scrollToHash(hash[1], true);
         }
       }
     }, 300);
+
 
     setTimeout(() => {
       this.headlineTypeSpeed = 65;
@@ -192,9 +281,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   onTeamSectionClicked(e: MouseEvent) {
-    if (e.srcElement.tagName !== 'IMG') {
+    if ((e.srcElement as any).tagName !== 'IMG') {
       this.showSkillsFor('Unsere');
     }
+  }
+
+
+  onRequestDemoClicked() {
+    const mailText = 'mailto:office@easysol.com?subject=EasyProvisioning Demo&body='; // add the links to body
+    window.location.href = mailText;
   }
 
   navigateTo(url: string) {
@@ -220,6 +315,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }, 1000);
   }
 
+  showProvVideoTab() {
+    this.showProvisioningVideoTabs = true;
+    setTimeout(() => {
+      this.provVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  }
+
+  showManagementVideoTab() {
+    this.showManagementVideoTabs = true;
+    setTimeout(() => {
+      this.managVideoContent.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  }
+
   private startHeadlineShow() {
     // this.currentHeaderIndex = 1;
 
@@ -228,7 +337,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (this.currentHeaderIndex >= this.headerTexts.length - 1) {
         this.currentHeaderIndex = 0;
       } else {
-        this.currentHeaderIndex ++;
+        this.currentHeaderIndex++;
       }
       setTimeout(() => {
         this.showHeaderText = true;

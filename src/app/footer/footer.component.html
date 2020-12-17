@@ -2,29 +2,34 @@
 
     <div class="uk-container">
         <div class="main-header uk-child-width-expand@s uk-text-left" uk-grid>
-            <div (click)="itemClicked('home')"><a [routerLink]="''" [fragment]="'home'">{{'home.title' | translate}}</a></div>
-            <div (click)="itemClicked('services')"><a [routerLink]="''" [fragment]="'services'">{{'services.title' | translate}}</a></div>
-            <div (click)="itemClicked('about-us')"><a [routerLink]="''" [fragment]="'about-us'">{{'about_us.title' | translate}}</a></div>
-            <div (click)="itemClicked('partner')"><a [routerLink]="''" [fragment]="'partner'">{{'_general.partners' | translate}}</a></div>
-            <div (click)="itemClicked('contact')"><a [routerLink]="''" [fragment]="'contact'">{{ 'contact.title' | translate }}</a></div>
+            <div (click)="itemClicked('home')"><a [routerLink]="''" [fragment]="'home'">{{'home.title' | translate}}</a>
+            </div>
+            <div (click)="itemClicked('services')"><a [routerLink]="''"
+                    [fragment]="'services'">{{'services.title' | translate}}</a></div>
+            <div (click)="itemClicked('about-us')"><a [routerLink]="''"
+                    [fragment]="'about-us'">{{'about_us.title' | translate}}</a></div>
+            <div (click)="itemClicked('partner')"><a [routerLink]="''"
+                    [fragment]="'partner'">{{'_general.references' | translate}}</a></div>
+            <div (click)="itemClicked('contact')"><a [routerLink]="''"
+                    [fragment]="'contact'">{{ 'contact.title' | translate }}</a></div>
         </div>
         <div class="uk-child-width-expand@s uk-text-left" uk-grid>
             <div></div>
-            <div [routerLink]="'services/isp-services'"><a>{{'services.isp.title' | translate}}</a></div>
+            <div></div>
             <div [routerLink]="'unternehmen/jobs'"><a>{{ 'jobs.title' | translate }}</a></div>
             <div></div>
             <div></div>
         </div>
         <div class="uk-child-width-expand@s uk-text-left" uk-grid>
             <div></div>
-            <div [routerLink]="'services/software-entwicklung'"><a>{{'services.dev.title' | translate}}</a></div>
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
         <div class="uk-child-width-expand@s uk-text-left" uk-grid>
             <div></div>
-            <div [routerLink]="'services/consulting'"><a>{{'services.consulting.title' | translate}}</a></div>
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
@@ -32,10 +37,10 @@
 
         <div class="social-media-content uk-container">
             <div class="center">
-                <a href="https://www.facebook.com/EasySolutions-GmbH-118361595511744"><img src="assets/icons/facebook.svg"
-                        alt="facebook"></a>
-                <a href="https://www.linkedin.com/company/11284774/"><img src="assets/icons/linkedin.svg" alt="linkedin"
-                        class="right"></a>
+                <a href="https://www.facebook.com/EasySolutions-GmbH-118361595511744"><img
+                        src="assets/icons/facebook.svg" alt="facebook"></a>
+                <a href="https://www.linkedin.com/company/11284774/"><img src="assets/icons/linkedin.svg" alt="linkedin"></a>
+                <a href="https://www.youtube.com/channel/UCYD6n9YkLnDIY9dF8mX8osQ"><i class="fa fa-youtube youtube"></i></a>
             </div>
         </div>
 
@@ -51,7 +56,7 @@
     </div>
 
     <div class="copyright-content">
-        <p>© 2017 EasySolutions GmbH</p>
+        <p>© 2021 EasySolutions GmbH</p>
         <p>Enterprise Software. Made in Austria</p>
     </div>
 

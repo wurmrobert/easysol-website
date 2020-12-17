@@ -1,19 +1,23 @@
 <div class="mac-slideshow-content">
   <div class="mac-img" uk-lightbox #lightbox>
     <div>
+      <a data-caption="Services" (click)="openLightbox()" [href]="images[images_i].src" class="fullscreen-href">
       <ngui-in-view>
-        <img *ngIf [src]="images[images_i].src" alt="screenshot" [@visibilityChanged]="images_visible" (load)="onScreenImgLoaded()"
-        >
+
+        <img *ngIf [src]="images[images_i].src" alt="screenshot" [@visibilityChanged]="images_visible"
+          (load)="onScreenImgLoaded()">
+
       </ngui-in-view>
+
+      </a>
 
       <ng-container *ngIf="screenImgLoaded">
         <div class="image-dots" *ngIf="images.length > 1">
-          <div *ngFor="let p of images; let i = index;" class="img-dot" (click)="onDotClicked(i)" [class.active]="i === images_i"></div>
+          <div *ngFor="let p of images; let i = index;" class="img-dot" (click)="onDotClicked(i)"
+            [class.active]="i === images_i"></div>
         </div>
 
-        <a data-caption="Services" (click)="openLightbox()" [href]="images[images_i].src" class="fullscreen-href">
-          <img class="fullscreen-btn" src="assets/icons/fullscreen.svg">
-        </a>
+
 
       </ng-container>
 

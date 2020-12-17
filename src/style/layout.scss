@@ -135,6 +135,15 @@ section {
 }
 
 
+.divider {
+    background-color: $orange;// white;
+    display: block;
+    height: 4px;
+    margin: 1.5em 0;
+    width: 5.25em;
+}
+
+
 @media screen and (max-width: $mobile-break-point) {
     .youtube-container {
         height: 100%;

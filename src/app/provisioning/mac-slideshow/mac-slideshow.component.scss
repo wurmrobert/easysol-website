@@ -3,34 +3,31 @@
 
 
 .mac-slideshow-content {
-    margin-top: -17%;
+    // margin-top: -17%;
 }
 
 .mac-img {
-    background-image: url('/assets/provisioning/Mac_Produktseite.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    //min-height: 200px;
-   // width: 100%
-   //height: 100%;
+    //background-image: url('/assets/provisioning/Mac_Produktseite.svg');
+    //background-repeat: no-repeat;
+    //background-position: center;
 
 
-   width: 100%;
-    height: 0;
-    padding-bottom: #{((180 / 150) *100%)}; // img is: 1366x970
-    position: relative;
+//    width: 100%;
+//     height: 0;
+//     padding-bottom: #{((180 / 150) *100%)}; // img is: 1366x970
+//     position: relative;
    
     .uk-button {
         padding: 0;
     }
     img {
-        position: relative;
-        z-index: -1;
-        padding-bottom: 0%;
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-top: 22%;
-        margin-top: 4px;
+        // position: relative;
+        // z-index: -1;
+        // padding-bottom: 0%;
+        // padding-left: 3%;
+        // padding-right: 3%;
+        // padding-top: 22%;
+        // margin-top: 4px;
     }
 
     
@@ -58,7 +55,7 @@
 
 .image-dots {
     display: -webkit-inline-box;
-    margin-top: 30%;
+    margin-top: 10px;
     margin-left: 0px;
     cursor: pointer;
 

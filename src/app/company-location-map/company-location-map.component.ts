@@ -79,7 +79,7 @@ export class CompanyLocationMapComponent implements OnInit, AfterViewInit {
 
     // add marker to map
     const marker = new mapboxgl.Marker(el, { offset: [-geojson.properties.iconSize[0] / 2, -geojson.properties.iconSize[1] / 2] })
-      .setLngLat(geojson.geometry.coordinates)
+      .setLngLat(geojson.geometry.coordinates as [number, number])
       .addTo(this.map);
 
     this.allMarkers.push(marker);

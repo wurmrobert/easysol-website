@@ -9,9 +9,10 @@
 </div>
 
 
-<div [@visibilityChanged]="pdfVisibility">
+<div>
     <button type="button" class="back-btn mat-icon-btn" (click)="navigateToJobs()"
       *ngIf="!noAvaliable"
+      [@visibilityChanged]="pdfVisibility"
     >
         <!-- <mat-icon>arrow_back</mat-icon> -->
         <img src="assets/icons/back.svg" alt="">
@@ -22,8 +23,8 @@
       [render-text]="true"
       [fit-to-page]="true"
       [autoresize]="true"
-      (after-load-complete)="loadCompleted()"
-      (error)="onLoadError()"
+      (after-load-complete)="loadCompleted($event)"
+      (error)="onLoadError($event)"
       style="display: block;"></pdf-viewer>
 
     <div class="not-avaliable" *ngIf="noAvaliable">

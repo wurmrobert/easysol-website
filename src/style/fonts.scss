@@ -1,28 +1,33 @@
 
-// @font-face {
-//     font-family: 'Montserrat-Light';
-//     src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf');
-// }
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('/assets/fonts/Montserrat/Montserrat-Light.ttf');
+}
 
 @font-face {
     font-family: 'Montserrat-ExtraBold';
     src: url('/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf');
 }
 
-// @font-face {
-//     font-family: 'Montserrat-Bold';
-//     src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
-// }
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
 
-// @font-face {
-//     font-family: 'Montserrat-SemiBold';
-//     src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
-// }
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('/assets/fonts/Montserrat/Montserrat-Bold.ttf');
+}
 
 
 
 body {
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat-Regular", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -32,27 +37,27 @@ body {
 .extra-bold {
     // font-family: "Montserrat-ExtraBold";
     font-weight: 800;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-family: "Montserrat-ExtraBold", "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 
 }
 
 .bold {
     //font-family: "Montserrat-Bold";
     font-weight: 600;
-    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;  
+    font-family: "Montserrat-Bold", "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;  
 }
 
 .medium {
     font-weight: 500;
     //font-family: "Montserrat-Medium";
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat-Medium", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
 .light {
     font-weight: 300;
    // font-family: "Montserrat-Light";
-   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: "Montserrat-Light", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -60,11 +65,11 @@ body {
 .semi-bold {
     font-weight: 700;
     // font-family: "Montserrat-SemiBold";
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat-SemiBold", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
 .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif !important;
+    font-family: "Montserrat-Bold", "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif !important;
 }
